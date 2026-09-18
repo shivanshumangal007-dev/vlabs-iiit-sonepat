@@ -1,10 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const CFileOperations2Content: LabContent = {
+export const CFileOperations2: Experiment = {
   id: 'c-file-operations-2',
-  title: 'C Programming — File Operations II',
+  title: 'C — File Operations II',
   labType: 'text',
-
+  status: 'live',
+  explore: {
+    semester: 3,
+    subject: 'C — Mathematical Expressions',
+    description: 'Extend file handling to binary files, random access with fseek/ftell, and structured record read/write using fread and fwrite.',
+    tags: ['c programming', 'binary files', 'fseek', 'fread', 'fwrite', 'random access'],
+  },
+  metaTitle: 'C — File Operations II — VLabs',
+  metaDescription: 'Extend file handling to binary files, random access with fseek/ftell, and structured record read/write using fread and fwrite.',
   sections: [
     {
       id: 'theory',

@@ -1,10 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const CombinationalMultipliersContent: LabContent = {
+export const CombinationalMultipliers: Experiment = {
   id: 'combinational-multipliers',
-  title: 'Combinational Array Multiplier',
+  title: 'Combinational Array Multiplier (Theory)',
   labType: 'text',
-
+  status: 'live',
+  explore: {
+    semester: 3,
+    subject: 'Wallace Tree Multiplier (Theory)',
+    description: 'Study the array multiplier architecture where AND gates generate partial products and a cascade of adder rows accumulates the final product.',
+    tags: ['array multiplier', 'partial products', 'combinational', 'multiplication', 'theory'],
+  },
+  metaTitle: 'Combinational Array Multiplier (Theory) — VLabs',
+  metaDescription: 'Study the array multiplier architecture where AND gates generate partial products and a cascade of adder rows accumulates the final product.',
   sections: [
     {
       id: 'theory',

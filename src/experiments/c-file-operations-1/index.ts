@@ -1,10 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const CFileOperations1Content: LabContent = {
+export const CFileOperations1: Experiment = {
   id: 'c-file-operations-1',
-  title: 'C Programming — File Operations I',
+  title: 'C — File Operations I',
   labType: 'text',
-
+  status: 'live',
+  explore: {
+    semester: 3,
+    subject: 'C — Mathematical Expressions',
+    description: 'Open, read, and write text files in C using fopen, fprintf, fscanf, and fclose. Handle common file errors and end-of-file conditions.',
+    tags: ['c programming', 'file i/o', 'fopen', 'fprintf', 'fscanf'],
+  },
+  metaTitle: 'C — File Operations I — VLabs',
+  metaDescription: 'Open, read, and write text files in C using fopen, fprintf, fscanf, and fclose. Handle common file errors and end-of-file conditions.',
   sections: [
     {
       id: 'theory',

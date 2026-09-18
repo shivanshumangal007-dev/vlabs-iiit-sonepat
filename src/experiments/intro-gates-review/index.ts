@@ -1,10 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const IntroGatesReviewContent: LabContent = {
+export const IntroGatesReview: Experiment = {
   id: 'intro-gates-review',
-  title: 'Introduction to Logic Gates — Review',
+  title: 'Introduction to Gates — Review',
   labType: 'text',
-
+  status: 'live',
+  explore: {
+    semester: 3,
+    subject: 'Combinational Arithmetic',
+    description: 'A concise review of all basic and universal logic gates, truth tables, Boolean identities, and De Morgan\'s theorem as a foundation for arithmetic circuits.',
+    tags: ['gates', 'review', 'boolean algebra', 'de morgan', 'theory'],
+  },
+  metaTitle: 'Introduction to Gates — Review — VLabs',
+  metaDescription: 'A concise review of all basic and universal logic gates, truth tables, Boolean identities, and De Morgan\'s theorem as a foundation for arithmetic circuits.',
   sections: [
     {
       id: 'theory',

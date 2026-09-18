@@ -1,10 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const BoothsMultiplierContent: LabContent = {
+export const BoothsMultiplier: Experiment = {
   id: 'booths-multiplier',
-  title: "Booth's Multiplication Algorithm",
+  title: '',
   labType: 'text',
-
+  status: 'live',
+  explore: {
+    semester: 3,
+    subject: 'Ripple Carry Adder',
+    description: "Learn Booth's radix-2 algorithm for signed binary multiplication. Trace through the add/subtract and shift steps using worked examples.",
+    tags: ["booth's algorithm", 'signed multiplication', 'radix-2', 'two\'s complement', 'theory'],
+  },
+  metaTitle: ' — VLabs',
+  metaDescription: "Learn Booth's radix-2 algorithm for signed binary multiplication. Trace through the add/subtract and shift steps using worked examples.",
   sections: [
     {
       id: 'theory',

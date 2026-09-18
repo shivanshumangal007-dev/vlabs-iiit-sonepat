@@ -50,16 +50,6 @@ import { BinarySubtractor4bitContent }    from './binary-subtractor-4bit';
 import { DigitalComparatorContent }       from './digital-comparator';
 import { ParityCheckerContent }           from './parity-checker';
 import { ShiftRegisterContent }           from './shift-register';
-import { GateLevelMinimizationContent }   from './gate-level-minimization';
-import { ClaAdderContent }                from './cla-adder';
-import { WallaceTreeContent }             from './wallace-tree';
-import { CombinationalMultipliersContent } from './combinational-multipliers';
-import { BoothsMultiplierContent }        from './booths-multiplier';
-import { RegistersCountersTheoryContent } from './registers-counters-theory';
-import { IntroGatesReviewContent }        from './intro-gates-review';
-import { CExpressionsContent }            from './c-expressions';
-import { CFileOperations1Content }        from './c-file-operations-1';
-import { CFileOperations2Content }        from './c-file-operations-2';
 import { SrLatchContent }                 from './sr-latch';
 import { DFlipFlopContent }               from './d-flip-flop';
 import { JkTFlipFlopContent }             from './jk-t-flip-flop';
@@ -126,16 +116,16 @@ export const ALL_CONTENTS: Record<string, LabContent> = {
   'digital-comparator':            DigitalComparatorContent,
   'parity-checker':                ParityCheckerContent,
   'shift-register':                ShiftRegisterContent,
-  'gate-level-minimization':       GateLevelMinimizationContent,
-  'cla-adder':                     ClaAdderContent,
-  'wallace-tree':                  WallaceTreeContent,
-  'combinational-multipliers':     CombinationalMultipliersContent,
-  'booths-multiplier':             BoothsMultiplierContent,
-  'registers-counters-theory':     RegistersCountersTheoryContent,
-  'intro-gates-review':            IntroGatesReviewContent,
-  'c-expressions':                 CExpressionsContent,
-  'c-file-operations-1':           CFileOperations1Content,
-  'c-file-operations-2':           CFileOperations2Content,
+  // 'gate-level-minimization' migrated
+  // 'cla-adder' migrated
+  // 'wallace-tree' migrated
+  // 'combinational-multipliers' migrated
+  // 'booths-multiplier' migrated
+  // 'registers-counters-theory' migrated
+  // 'intro-gates-review' migrated
+  // 'c-expressions' migrated
+  // 'c-file-operations-1' migrated
+  // 'c-file-operations-2' migrated
   'sr-latch':                      SrLatchContent,
   'd-flip-flop':                   DFlipFlopContent,
   'jk-t-flip-flop':                JkTFlipFlopContent,

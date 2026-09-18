@@ -1,10 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const CExpressionsContent: LabContent = {
+export const CExpressions: Experiment = {
   id: 'c-expressions',
-  title: 'C Programming — Mathematical Expressions',
+  title: 'C — Mathematical Expressions',
   labType: 'text',
-
+  status: 'live',
+  explore: {
+    semester: 3,
+    subject: 'Programming Fundamentals',
+    description: 'Write C programs that evaluate arithmetic, relational, logical, and bitwise expressions. Observe operator precedence and type-conversion behaviour.',
+    tags: ['c programming', 'expressions', 'operators', 'precedence', 'type conversion'],
+  },
+  metaTitle: 'C — Mathematical Expressions — VLabs',
+  metaDescription: 'Write C programs that evaluate arithmetic, relational, logical, and bitwise expressions. Observe operator precedence and type-conversion behaviour.',
   sections: [
     {
       id: 'theory',

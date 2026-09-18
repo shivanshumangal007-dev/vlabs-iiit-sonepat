@@ -1,10 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const RegistersCountersTheoryContent: LabContent = {
+export const RegistersCountersTheory: Experiment = {
   id: 'registers-counters-theory',
-  title: 'Registers and Counters — Theory',
+  title: 'Registers and Counters (Theory)',
   labType: 'text',
-
+  status: 'live',
+  explore: {
+    semester: 3,
+    subject: 'Carry-Look-Ahead Adder (Theory)',
+    description: 'Study the internal structure of shift registers, binary counters, and their use in data storage, frequency division, and sequence generation.',
+    tags: ['registers', 'counters', 'shift register', 'binary counter', 'theory'],
+  },
+  metaTitle: 'Registers and Counters (Theory) — VLabs',
+  metaDescription: 'Study the internal structure of shift registers, binary counters, and their use in data storage, frequency division, and sequence generation.',
   sections: [
     {
       id: 'theory',

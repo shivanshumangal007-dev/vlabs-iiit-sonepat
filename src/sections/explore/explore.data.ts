@@ -445,14 +445,8 @@ const SEMESTER_2: ExploreSemester = {
         'Design with Karnaugh maps and verify using 74HC-series ICs.',
       circuitId: 'decoder',
       experiments: [
-        {
-          id: 'gate-level-minimization',
-          title: 'Gate-Level Minimization (K-maps)',
-          description: 'Apply Karnaugh map minimisation to reduce multi-variable Boolean expressions to minimal SOP/POS forms and implement the optimised circuit.',
-          circuitId: 'decoder',
-          labRoute: '/labs/gate-level-minimization',
-          tags: ['k-map', 'karnaugh', 'minimization', 'sop', 'pos', 'boolean algebra'],
-        },
+        // 'gate-level-minimization' migrated to src/experiments/gate-level-minimization/
+        toExploreExperiment(EXPERIMENTS_BY_ID['gate-level-minimization']),
         {
           id: 'parity-checker',
           title: 'Parity Checker/Generator',
@@ -495,14 +489,8 @@ const SEMESTER_3: ExploreSemester = {
         'Covers both interactive simulations and theory-based treatments.',
       circuitId: 'full-adder-ripple',
       experiments: [
-        {
-          id: 'intro-gates-review',
-          title: 'Introduction to Gates — Review',
-          description: 'A concise review of all basic and universal logic gates, truth tables, Boolean identities, and De Morgan\'s theorem as a foundation for arithmetic circuits.',
-          circuitId: 'full-adder-ripple',
-          labRoute: '/labs/intro-gates-review',
-          tags: ['gates', 'review', 'boolean algebra', 'de morgan', 'theory'],
-        },
+        // 'intro-gates-review' migrated to src/experiments/intro-gates-review/
+        toExploreExperiment(EXPERIMENTS_BY_ID['intro-gates-review']),
         {
           id: 'full-adder-ripple',
           title: 'Ripple Carry Adder',
@@ -511,46 +499,16 @@ const SEMESTER_3: ExploreSemester = {
           labRoute: '/labs/full-adder-ripple',
           tags: ['ripple carry', '4-bit adder', 'carry propagation', 'alu', 'delay'],
         },
-        {
-          id: 'cla-adder',
-          title: 'Carry-Look-Ahead Adder (Theory)',
-          description: 'Study the carry-lookahead technique that eliminates ripple delay by computing all carry signals in parallel using generate and propagate terms.',
-          circuitId: 'full-adder-ripple',
-          labRoute: '/labs/cla-adder',
-          tags: ['carry lookahead', 'cla', 'adder', 'generate', 'propagate', 'theory'],
-        },
-        {
-          id: 'registers-counters-theory',
-          title: 'Registers and Counters (Theory)',
-          description: 'Study the internal structure of shift registers, binary counters, and their use in data storage, frequency division, and sequence generation.',
-          circuitId: 'full-adder-ripple',
-          labRoute: '/labs/registers-counters-theory',
-          tags: ['registers', 'counters', 'shift register', 'binary counter', 'theory'],
-        },
-        {
-          id: 'wallace-tree',
-          title: 'Wallace Tree Multiplier (Theory)',
-          description: 'Explore the Wallace tree reduction technique that compresses partial products in O(log n) stages to achieve high-speed multiplication.',
-          circuitId: 'full-adder-ripple',
-          labRoute: '/labs/wallace-tree',
-          tags: ['wallace tree', 'multiplier', 'partial products', 'fast adder', 'theory'],
-        },
-        {
-          id: 'combinational-multipliers',
-          title: 'Combinational Array Multiplier (Theory)',
-          description: 'Study the array multiplier architecture where AND gates generate partial products and a cascade of adder rows accumulates the final product.',
-          circuitId: 'full-adder-ripple',
-          labRoute: '/labs/combinational-multipliers',
-          tags: ['array multiplier', 'partial products', 'combinational', 'multiplication', 'theory'],
-        },
-        {
-          id: 'booths-multiplier',
-          title: "Booth's Multiplication Algorithm",
-          description: "Learn Booth's radix-2 algorithm for signed binary multiplication. Trace through the add/subtract and shift steps using worked examples.",
-          circuitId: 'full-adder-ripple',
-          labRoute: '/labs/booths-multiplier',
-          tags: ["booth's algorithm", 'signed multiplication', 'radix-2', 'two\'s complement', 'theory'],
-        },
+        // 'cla-adder' migrated to src/experiments/cla-adder/
+        toExploreExperiment(EXPERIMENTS_BY_ID['cla-adder']),
+        // 'registers-counters-theory' migrated to src/experiments/registers-counters-theory/
+        toExploreExperiment(EXPERIMENTS_BY_ID['registers-counters-theory']),
+        // 'wallace-tree' migrated to src/experiments/wallace-tree/
+        toExploreExperiment(EXPERIMENTS_BY_ID['wallace-tree']),
+        // 'combinational-multipliers' migrated to src/experiments/combinational-multipliers/
+        toExploreExperiment(EXPERIMENTS_BY_ID['combinational-multipliers']),
+        // 'booths-multiplier' migrated to src/experiments/booths-multiplier/
+        toExploreExperiment(EXPERIMENTS_BY_ID['booths-multiplier']),
       ],
     },
     {
@@ -611,30 +569,12 @@ const SEMESTER_3: ExploreSemester = {
         'Use an in-browser editor with real-time compilation feedback.',
       circuitId: 'half-adder',
       experiments: [
-        {
-          id: 'c-expressions',
-          title: 'C — Mathematical Expressions',
-          description: 'Write C programs that evaluate arithmetic, relational, logical, and bitwise expressions. Observe operator precedence and type-conversion behaviour.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/c-expressions',
-          tags: ['c programming', 'expressions', 'operators', 'precedence', 'type conversion'],
-        },
-        {
-          id: 'c-file-operations-1',
-          title: 'C — File Operations I',
-          description: 'Open, read, and write text files in C using fopen, fprintf, fscanf, and fclose. Handle common file errors and end-of-file conditions.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/c-file-operations-1',
-          tags: ['c programming', 'file i/o', 'fopen', 'fprintf', 'fscanf'],
-        },
-        {
-          id: 'c-file-operations-2',
-          title: 'C — File Operations II',
-          description: 'Extend file handling to binary files, random access with fseek/ftell, and structured record read/write using fread and fwrite.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/c-file-operations-2',
-          tags: ['c programming', 'binary files', 'fseek', 'fread', 'fwrite', 'random access'],
-        },
+        // 'c-expressions' migrated to src/experiments/c-expressions/
+        toExploreExperiment(EXPERIMENTS_BY_ID['c-expressions']),
+        // 'c-file-operations-1' migrated to src/experiments/c-file-operations-1/
+        toExploreExperiment(EXPERIMENTS_BY_ID['c-file-operations-1']),
+        // 'c-file-operations-2' migrated to src/experiments/c-file-operations-2/
+        toExploreExperiment(EXPERIMENTS_BY_ID['c-file-operations-2']),
       ],
     },
   ],

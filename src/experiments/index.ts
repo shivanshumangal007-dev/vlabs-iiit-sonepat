@@ -8,10 +8,32 @@
 // in, so the new source wins on conflict without breaking any existing consumer.
 
 import { type Experiment } from './types';
-import { HalfAdder }       from './half-adder';  // pilot — Phase 2 proof of concept
+import { HalfAdder }       from './half-adder';
+import { RegistersCountersTheory } from './registers-counters-theory';
+import { CFileOperations1 } from './c-file-operations-1';
+import { CombinationalMultipliers } from './combinational-multipliers';
+import { ClaAdder } from './cla-adder';
+import { CFileOperations2 } from './c-file-operations-2';
+import { WallaceTree } from './wallace-tree';
+import { GateLevelMinimization } from './gate-level-minimization';
+import { BoothsMultiplier } from './booths-multiplier';
+import { CExpressions } from './c-expressions';
+import { IntroGatesReview } from './intro-gates-review';
+  // pilot — Phase 2 proof of concept
 
 export const ALL_EXPERIMENTS: Experiment[] = [
   HalfAdder,
+  RegistersCountersTheory,
+  CFileOperations1,
+  CombinationalMultipliers,
+  ClaAdder,
+  CFileOperations2,
+  WallaceTree,
+  GateLevelMinimization,
+  BoothsMultiplier,
+  CExpressions,
+  IntroGatesReview,
+
 ];
 
 /** O(1) lookup by canonical id slug. */

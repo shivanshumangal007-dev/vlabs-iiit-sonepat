@@ -1,10 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const ClaAdderContent: LabContent = {
+export const ClaAdder: Experiment = {
   id: 'cla-adder',
-  title: 'Carry-Look-Ahead Adder (CLA)',
+  title: 'Carry-Look-Ahead Adder (Theory)',
   labType: 'text',
-
+  status: 'live',
+  explore: {
+    semester: 3,
+    subject: 'Ripple Carry Adder',
+    description: 'Study the carry-lookahead technique that eliminates ripple delay by computing all carry signals in parallel using generate and propagate terms.',
+    tags: ['carry lookahead', 'cla', 'adder', 'generate', 'propagate', 'theory'],
+  },
+  metaTitle: 'Carry-Look-Ahead Adder (Theory) — VLabs',
+  metaDescription: 'Study the carry-lookahead technique that eliminates ripple delay by computing all carry signals in parallel using generate and propagate terms.',
   sections: [
     {
       id: 'theory',

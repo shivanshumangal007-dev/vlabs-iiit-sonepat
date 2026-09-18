@@ -1,10 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const GateLevelMinimizationContent: LabContent = {
+export const GateLevelMinimization: Experiment = {
   id: 'gate-level-minimization',
-  title: 'Gate-Level Minimization using Karnaugh Maps',
+  title: 'Gate-Level Minimization (K-maps)',
   labType: 'text',
-
+  status: 'live',
+  explore: {
+    semester: 2,
+    subject: 'Digital Logic Design',
+    description: 'Apply Karnaugh map minimisation to reduce multi-variable Boolean expressions to minimal SOP/POS forms and implement the optimised circuit.',
+    tags: ['k-map', 'karnaugh', 'minimization', 'sop', 'pos', 'boolean algebra'],
+  },
+  metaTitle: 'Gate-Level Minimization (K-maps) — VLabs',
+  metaDescription: 'Apply Karnaugh map minimisation to reduce multi-variable Boolean expressions to minimal SOP/POS forms and implement the optimised circuit.',
   sections: [
     {
       id: 'theory',

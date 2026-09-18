@@ -1,10 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const WallaceTreeContent: LabContent = {
+export const WallaceTree: Experiment = {
   id: 'wallace-tree',
-  title: 'Wallace Tree Multiplier',
+  title: 'Wallace Tree Multiplier (Theory)',
   labType: 'text',
-
+  status: 'live',
+  explore: {
+    semester: 3,
+    subject: 'Ripple Carry Adder',
+    description: 'Explore the Wallace tree reduction technique that compresses partial products in O(log n) stages to achieve high-speed multiplication.',
+    tags: ['wallace tree', 'multiplier', 'partial products', 'fast adder', 'theory'],
+  },
+  metaTitle: 'Wallace Tree Multiplier (Theory) — VLabs',
+  metaDescription: 'Explore the Wallace tree reduction technique that compresses partial products in O(log n) stages to achieve high-speed multiplication.',
   sections: [
     {
       id: 'theory',
