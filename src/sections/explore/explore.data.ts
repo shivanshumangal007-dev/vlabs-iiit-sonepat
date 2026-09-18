@@ -202,7 +202,7 @@ const SEMESTER_1: ExploreSemester = {
           tags: ['logic gates', 'and', 'or', 'not', 'nand', 'nor', 'xor', '74hc'],
         },
         {
-          id: 'half-adder-logic',
+          id: 'half-adder',
           title: 'Half Adder',
           description: 'A half adder adds two single-bit inputs A and B, producing a Sum (XOR) and Carry (AND) bit. Built using 74HC86 and 74HC08 ICs.',
           circuitId: 'half-adder',
@@ -210,7 +210,7 @@ const SEMESTER_1: ExploreSemester = {
           tags: ['adder', 'xor', 'and', 'sum', 'carry', 'combinational logic'],
         },
         {
-          id: 'full-adder-logic',
+          id: 'full-adder',
           title: 'Full Adder',
           description: 'A full adder accepts carry-in enabling multi-bit addition. Built with two XOR gates, two AND gates, and one OR gate.',
           circuitId: 'full-adder',
@@ -218,7 +218,7 @@ const SEMESTER_1: ExploreSemester = {
           tags: ['adder', 'carry-in', 'sum', 'carry-out', 'combinational logic'],
         },
         {
-          id: 'half-subtractor-logic',
+          id: 'half-subtractor',
           title: 'Half Subtractor',
           description: 'The half subtractor computes A − B, yielding a Difference (XOR) and a Borrow ((NOT A) AND B).',
           circuitId: 'half-subtractor',
@@ -226,7 +226,7 @@ const SEMESTER_1: ExploreSemester = {
           tags: ['subtractor', 'difference', 'borrow', 'xor', 'not', 'and'],
         },
         {
-          id: 'full-subtractor-logic',
+          id: 'full-subtractor',
           title: 'Full Subtractor',
           description: 'The full subtractor handles a borrow-in, allowing cascading multi-bit subtraction. Built with two XOR, NOT, two AND, and OR gates.',
           circuitId: 'full-subtractor',
@@ -234,18 +234,18 @@ const SEMESTER_1: ExploreSemester = {
           tags: ['subtractor', 'borrow-in', 'difference', 'borrow-out', 'multi-bit'],
         },
         {
-          id: 'mux-logic',
+          id: 'mux-2to1',
           title: '2:1 Multiplexer',
           description: 'A multiplexer selects one of two data inputs and routes it to the output based on a select line. Y = A·S\' + B·S.',
-          circuitId: 'mux',
+          circuitId: 'mux-2to1',
           labRoute: '/labs/mux-2to1',
           tags: ['mux', 'multiplexer', 'selector', 'data routing', 'not', 'and', 'or'],
         },
         {
-          id: 'demux-logic',
+          id: 'demux-1to2',
           title: '1:2 Demultiplexer',
           description: 'A demultiplexer routes a single data input to one of two outputs based on a select line. S=0: Y0=I, Y1=0. S=1: Y0=0, Y1=I.',
-          circuitId: 'demux',
+          circuitId: 'demux-1to2',
           labRoute: '/labs/demux-1to2',
           tags: ['demux', 'demultiplexer', 'address decoding', 'not', 'and'],
         },
@@ -265,13 +265,13 @@ const SEMESTER_2: ExploreSemester = {
       description:
         'Implement encoders, decoders, and MUX/DEMUX-based logic on a breadboard. ' +
         'Explore Boolean minimisation and address decoding used in memory systems.',
-      circuitId: 'encoder',
+      circuitId: 'encoder-4to2',
       experiments: [
         {
           id: 'encoder-4to2',
           title: '4:2 Priority Encoder',
           description: 'A priority encoder converts four active-high input lines to a 2-bit binary code. Built from two OR gates using 74HC32.',
-          circuitId: 'encoder',
+          circuitId: 'encoder-4to2',
           labRoute: '/labs/encoder-4to2',
           tags: ['encoder', 'priority', 'binary code', 'or gate', '74hc32'],
         },
@@ -279,7 +279,7 @@ const SEMESTER_2: ExploreSemester = {
           id: 'decoder-2to4',
           title: '2:4 Binary Decoder',
           description: 'A binary decoder maps a 2-bit input to one of four mutually exclusive output lines. Built with two NOT and four AND gates.',
-          circuitId: 'decoder',
+          circuitId: 'decoder-2to4',
           labRoute: '/labs/decoder-2to4',
           tags: ['decoder', 'binary', 'address decode', 'not', 'and', '74hc04', '74hc08'],
         },

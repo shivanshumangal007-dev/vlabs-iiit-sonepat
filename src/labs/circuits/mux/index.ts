@@ -4,7 +4,7 @@ import { type Circuit } from '@/labs/types';
 // S=0 → Y=A, S=1 → Y=B
 
 export const Mux2to1: Circuit = {
-  id: 'mux',
+  id: 'mux-2to1',
   title: '2:1 Multiplexer (MUX)',
   description:
     'A 2-to-1 MUX selects one of two inputs (A or B) based on select line S. ' +

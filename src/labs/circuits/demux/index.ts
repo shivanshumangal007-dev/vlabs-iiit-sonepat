@@ -4,7 +4,7 @@ import { type Circuit } from '@/labs/types';
 // Y0 = I AND (NOT S),  Y1 = I AND S
 
 export const Demux1to2: Circuit = {
-  id: 'demux',
+  id: 'demux-1to2',
   title: '1:2 Demultiplexer (DEMUX)',
   description:
     'A 1-to-2 DEMUX routes a single input I to one of two outputs (Y0 or Y1) based on select line S. ' +

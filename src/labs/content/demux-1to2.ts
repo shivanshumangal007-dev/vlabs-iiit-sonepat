@@ -3,7 +3,7 @@ import { type LabContent } from '@/labs/lab-content.types';
 export const Demux1to2Content: LabContent = {
   id: 'demux-1to2',
   title: '1:2 Demultiplexer',
-  circuitId: 'demux',
+  circuitId: 'demux-1to2',
   sections: [
     {
       id: 'theory',

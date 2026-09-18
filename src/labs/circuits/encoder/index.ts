@@ -4,7 +4,7 @@ import { type Circuit } from '@/labs/types';
 // A = I2 OR I3,  B = I1 OR I3
 
 export const Encoder4to2: Circuit = {
-  id: 'encoder',
+  id: 'encoder-4to2',
   title: '4:2 Priority Encoder',
   description:
     'A 4-to-2 encoder takes 4 input lines (only one HIGH at a time) and outputs a 2-bit binary code. ' +

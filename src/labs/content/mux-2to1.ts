@@ -3,7 +3,7 @@ import { type LabContent } from '@/labs/lab-content.types';
 export const Mux2to1Content: LabContent = {
   id: 'mux-2to1',
   title: '2:1 Multiplexer',
-  circuitId: 'mux',
+  circuitId: 'mux-2to1',
   sections: [
     {
       id: 'theory',

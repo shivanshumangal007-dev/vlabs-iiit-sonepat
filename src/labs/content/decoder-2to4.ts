@@ -3,7 +3,7 @@ import { type LabContent } from '@/labs/lab-content.types';
 export const Decoder2to4Content: LabContent = {
   id: 'decoder-2to4',
   title: '2:4 Binary Decoder',
-  circuitId: 'decoder',
+  circuitId: 'decoder-2to4',
   sections: [
     {
       id: 'theory',

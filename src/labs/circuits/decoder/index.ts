@@ -4,7 +4,7 @@ import { type Circuit } from '@/labs/types';
 // Y0=A'B', Y1=A'B, Y2=AB', Y3=AB
 
 export const Decoder2to4: Circuit = {
-  id: 'decoder',
+  id: 'decoder-2to4',
   title: '2:4 Binary Decoder',
   description:
     'A 2-to-4 decoder takes a 2-bit binary input (A,B) and activates exactly one of 4 outputs. ' +
