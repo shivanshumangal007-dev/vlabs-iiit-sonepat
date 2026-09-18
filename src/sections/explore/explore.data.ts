@@ -53,102 +53,30 @@ const SEMESTER_1: ExploreSemester = {
         'Build and test real circuits on a breadboard using oscilloscopes and multimeters.',
       circuitId: 'study-basic-components',
       experiments: [
-        {
-          id: 'study-basic-components',
-          title: 'Study of basic electronic components and laboratory instruments',
-          description: 'Get familiar with resistors, capacitors, diodes, LEDs, transistors, and the breadboard. Learn to use the multimeter, function generator, and oscilloscope.',
-          circuitId: 'study-basic-components',
-          labRoute: '/labs/study-basic-components',
-          tags: ['components', 'instruments', 'breadboard', 'multimeter', 'oscilloscope'],
-        },
-        {
-          id: 'pn-junction-diode',
-          title: 'V-I characteristics of PN junction diode',
-          description: 'Plot the voltage-current characteristic of a 1N4148 diode in both forward and reverse bias. Determine threshold voltage and dynamic resistance.',
-          circuitId: 'pn-junction-diode',
-          labRoute: '/labs/pn-junction-diode',
-          tags: ['diode', 'pn junction', 'forward bias', 'reverse bias', 'characteristics'],
-        },
-        {
-          id: 'zener-diode',
-          title: 'V-I characteristics of Zener diode',
-          description: 'Study the V-I characteristics of a Zener diode, especially in the reverse breakdown region. Determine the Zener voltage and Zener impedance.',
-          circuitId: 'zener-diode',
-          labRoute: '/labs/zener-diode',
-          tags: ['zener', 'diode', 'breakdown', 'characteristics'],
-        },
-        {
-          id: 'zener-voltage-regulator',
-          title: 'Zener diode as a voltage regulator',
-          description: 'Build a shunt voltage regulator using a Zener diode. Measure line and load regulation and verify constant output voltage.',
-          circuitId: 'zener-voltage-regulator',
-          labRoute: '/labs/zener-voltage-regulator',
-          tags: ['zener', 'voltage regulator', 'line regulation', 'load regulation'],
-        },
-        {
-          id: 'half-wave-rectifier',
-          title: 'Half-wave rectifier',
-          description: 'Build and analyse a half-wave rectifier circuit using a single 1N4148 diode. Observe pulsating DC output and measure ripple factor.',
-          circuitId: 'half-wave-rectifier',
-          labRoute: '/labs/half-wave-rectifier',
-          tags: ['rectifier', 'diode', 'half-wave', 'ripple'],
-        },
-        {
-          id: 'full-wave-rectifier',
-          title: 'Full-wave rectifier',
-          description: 'Build a bridge rectifier using four 1N4007 diodes. Compare output frequency, average voltage, and ripple factor with the half-wave rectifier.',
-          circuitId: 'full-wave-rectifier',
-          labRoute: '/labs/full-wave-rectifier',
-          tags: ['rectifier', 'bridge', 'full-wave', 'ripple'],
-        },
-        {
-          id: 'rectifiers-capacitor-filters',
-          title: 'Rectifiers with capacitor filters',
-          description: 'Add capacitor filters of varying values to a full-wave rectifier. Observe and quantify ripple reduction as a function of capacitance.',
-          circuitId: 'rectifiers-capacitor-filters',
-          labRoute: '/labs/rectifiers-capacitor-filters',
-          tags: ['rectifier', 'filter', 'capacitor', 'ripple reduction'],
-        },
-        {
-          id: 'ce-amplifier',
-          title: 'Common Emitter amplifier',
-          description: 'Design, build and characterise a BC547 common-emitter amplifier. Measure voltage gain, input/output impedance, and frequency response.',
-          circuitId: 'ce-amplifier',
-          labRoute: '/labs/ce-amplifier',
-          tags: ['bjt', 'amplifier', 'common emitter', 'frequency response', 'gain'],
-        },
-        {
-          id: 'cb-amplifier',
-          title: 'Common-Base Amplifier Characteristics',
-          description: 'Wire a BJT in common-base configuration and measure current gain (α), input/output impedance, and frequency response. Compare with CE stage.',
-          circuitId: 'ce-amplifier',
-          labRoute: '/labs/cb-amplifier',
-          tags: ['bjt', 'amplifier', 'common base', 'alpha', 'current gain'],
-        },
-        {
-          id: 'bjt-bias',
-          title: 'BJT Bias Configurations',
-          description: 'Compare fixed-bias and voltage-divider bias for a BC547 BJT. Measure Q-point stability against β variation and temperature changes.',
-          circuitId: 'ce-amplifier',
-          labRoute: '/labs/bjt-bias',
-          tags: ['bjt', 'bias', 'q-point', 'voltage divider', 'stability'],
-        },
-        {
-          id: 'mosfet-characteristics',
-          title: 'MOSFET Drain & Transfer Characteristics',
-          description: 'Plot ID vs VDS (output) and ID vs VGS (transfer) characteristics of a 2N7000 N-channel MOSFET. Determine threshold voltage and transconductance.',
-          circuitId: 'ce-amplifier',
-          labRoute: '/labs/mosfet-characteristics',
-          tags: ['mosfet', 'drain characteristics', 'transfer characteristics', '2N7000', 'threshold voltage'],
-        },
-        {
-          id: 'opamp-circuits',
-          title: 'Inverting & Non-Inverting Op-Amp Amplifiers',
-          description: 'Build inverting (Av = −10) and non-inverting (Av = +11) amplifier configurations using an LM741 op-amp. Verify gain, bandwidth, and phase relationship.',
-          circuitId: 'ce-amplifier',
-          labRoute: '/labs/opamp-circuits',
-          tags: ['op-amp', 'lm741', 'inverting', 'non-inverting', 'voltage gain'],
-        },
+        // 'study-basic-components' migrated to src/experiments/study-basic-components/
+        toExploreExperiment(EXPERIMENTS_BY_ID['study-basic-components']),
+        // 'pn-junction-diode' migrated to src/experiments/pn-junction-diode/
+        toExploreExperiment(EXPERIMENTS_BY_ID['pn-junction-diode']),
+        // 'zener-diode' migrated to src/experiments/zener-diode/
+        toExploreExperiment(EXPERIMENTS_BY_ID['zener-diode']),
+        // 'zener-voltage-regulator' migrated to src/experiments/zener-voltage-regulator/
+        toExploreExperiment(EXPERIMENTS_BY_ID['zener-voltage-regulator']),
+        // 'half-wave-rectifier' migrated to src/experiments/half-wave-rectifier/
+        toExploreExperiment(EXPERIMENTS_BY_ID['half-wave-rectifier']),
+        // 'full-wave-rectifier' migrated to src/experiments/full-wave-rectifier/
+        toExploreExperiment(EXPERIMENTS_BY_ID['full-wave-rectifier']),
+        // 'rectifiers-capacitor-filters' migrated to src/experiments/rectifiers-capacitor-filters/
+        toExploreExperiment(EXPERIMENTS_BY_ID['rectifiers-capacitor-filters']),
+        // 'ce-amplifier' migrated to src/experiments/ce-amplifier/
+        toExploreExperiment(EXPERIMENTS_BY_ID['ce-amplifier']),
+        // 'cb-amplifier' migrated to src/experiments/cb-amplifier/
+        toExploreExperiment(EXPERIMENTS_BY_ID['cb-amplifier']),
+        // 'bjt-bias' migrated to src/experiments/bjt-bias/
+        toExploreExperiment(EXPERIMENTS_BY_ID['bjt-bias']),
+        // 'mosfet-characteristics' migrated to src/experiments/mosfet-characteristics/
+        toExploreExperiment(EXPERIMENTS_BY_ID['mosfet-characteristics']),
+        // 'opamp-circuits' migrated to src/experiments/opamp-circuits/
+        toExploreExperiment(EXPERIMENTS_BY_ID['opamp-circuits']),
       ],
     },
     {
@@ -159,46 +87,16 @@ const SEMESTER_1: ExploreSemester = {
         'Build circuits with multiple sources and resistors, and apply Ohm\'s Law, KCL, KVL, and network theorems.',
       circuitId: 'ohms-law',
       experiments: [
-        {
-          id: 'ohms-law',
-          title: "Verification of Ohm's Law",
-          description: "Verify V = IR experimentally by measuring voltage across and current through resistors. Plot V-I characteristic and compute resistance from slope.",
-          circuitId: 'ohms-law',
-          labRoute: '/labs/ohms-law',
-          tags: ['ohm', 'resistance', 'voltage', 'current', 'v-i graph'],
-        },
-        {
-          id: 'kirchhoff-laws',
-          title: "Kirchhoff's Current and Voltage Laws",
-          description: "Build a multi-resistor DC circuit and verify KCL at nodes and KVL around loops. Confirm that currents and voltages obey conservation laws.",
-          circuitId: 'kirchhoff-laws',
-          labRoute: '/labs/kirchhoff-laws',
-          tags: ['kirchhoff', 'kcl', 'kvl', 'dc circuit', 'nodes', 'loops'],
-        },
-        {
-          id: 'superposition-theorem',
-          title: 'Superposition Theorem',
-          description: "Demonstrate that the response of a linear circuit with multiple independent sources equals the sum of responses from each source acting alone.",
-          circuitId: 'superposition-theorem',
-          labRoute: '/labs/superposition-theorem',
-          tags: ['superposition', 'linear circuit', 'multiple sources', 'dc network'],
-        },
-        {
-          id: 'thevenin-theorem',
-          title: "Thevenin's Theorem",
-          description: "Find the Thevenin equivalent (V_th and R_th) of a two-terminal DC network and verify that it delivers the same current to any load as the original circuit.",
-          circuitId: 'thevenin-theorem',
-          labRoute: '/labs/thevenin-theorem',
-          tags: ['thevenin', 'equivalent circuit', 'V_th', 'R_th'],
-        },
-        {
-          id: 'norton-theorem',
-          title: "Norton's Theorem",
-          description: "Find the Norton equivalent (I_N and R_N) of a two-terminal network and verify equivalence with the Thevenin circuit. Confirm R_N = R_th.",
-          circuitId: 'norton-theorem',
-          labRoute: '/labs/norton-theorem',
-          tags: ['norton', 'equivalent circuit', 'short circuit current', 'source transformation'],
-        },
+        // 'ohms-law' migrated to src/experiments/ohms-law/
+        toExploreExperiment(EXPERIMENTS_BY_ID['ohms-law']),
+        // 'kirchhoff-laws' migrated to src/experiments/kirchhoff-laws/
+        toExploreExperiment(EXPERIMENTS_BY_ID['kirchhoff-laws']),
+        // 'superposition-theorem' migrated to src/experiments/superposition-theorem/
+        toExploreExperiment(EXPERIMENTS_BY_ID['superposition-theorem']),
+        // 'thevenin-theorem' migrated to src/experiments/thevenin-theorem/
+        toExploreExperiment(EXPERIMENTS_BY_ID['thevenin-theorem']),
+        // 'norton-theorem' migrated to src/experiments/norton-theorem/
+        toExploreExperiment(EXPERIMENTS_BY_ID['norton-theorem']),
       ],
     },
     {
@@ -209,56 +107,20 @@ const SEMESTER_1: ExploreSemester = {
         'Cover basic gates, adders, subtractors, multiplexers, and demultiplexers.',
       circuitId: 'logic-gates',
       experiments: [
-        {
-          id: 'logic-gates',
-          title: 'Realisation of basic logic gates',
-          description: 'Implement AND, OR, NOT, NAND, NOR, XOR, and XNOR gates using 74HC-series ICs. Verify the truth table of each gate using LEDs.',
-          circuitId: 'logic-gates',
-          labRoute: '/labs/logic-gates',
-          tags: ['logic gates', 'and', 'or', 'not', 'nand', 'nor', 'xor', '74hc'],
-        },
+        // 'logic-gates' migrated to src/experiments/logic-gates/
+        toExploreExperiment(EXPERIMENTS_BY_ID['logic-gates']),
         // 'half-adder' migrated to src/experiments/half-adder/ — derived below
         toExploreExperiment(EXPERIMENTS_BY_ID['half-adder']),
-        {
-          id: 'full-adder',
-          title: 'Full Adder',
-          description: 'A full adder accepts carry-in enabling multi-bit addition. Built with two XOR gates, two AND gates, and one OR gate.',
-          circuitId: 'full-adder',
-          labRoute: '/labs/full-adder',
-          tags: ['adder', 'carry-in', 'sum', 'carry-out', 'combinational logic'],
-        },
-        {
-          id: 'half-subtractor',
-          title: 'Half Subtractor',
-          description: 'The half subtractor computes A − B, yielding a Difference (XOR) and a Borrow ((NOT A) AND B).',
-          circuitId: 'half-subtractor',
-          labRoute: '/labs/half-subtractor',
-          tags: ['subtractor', 'difference', 'borrow', 'xor', 'not', 'and'],
-        },
-        {
-          id: 'full-subtractor',
-          title: 'Full Subtractor',
-          description: 'The full subtractor handles a borrow-in, allowing cascading multi-bit subtraction. Built with two XOR, NOT, two AND, and OR gates.',
-          circuitId: 'full-subtractor',
-          labRoute: '/labs/full-subtractor',
-          tags: ['subtractor', 'borrow-in', 'difference', 'borrow-out', 'multi-bit'],
-        },
-        {
-          id: 'mux-2to1',
-          title: '2:1 Multiplexer',
-          description: 'A multiplexer selects one of two data inputs and routes it to the output based on a select line. Y = A·S\' + B·S.',
-          circuitId: 'mux-2to1',
-          labRoute: '/labs/mux-2to1',
-          tags: ['mux', 'multiplexer', 'selector', 'data routing', 'not', 'and', 'or'],
-        },
-        {
-          id: 'demux-1to2',
-          title: '1:2 Demultiplexer',
-          description: 'A demultiplexer routes a single data input to one of two outputs based on a select line. S=0: Y0=I, Y1=0. S=1: Y0=0, Y1=I.',
-          circuitId: 'demux-1to2',
-          labRoute: '/labs/demux-1to2',
-          tags: ['demux', 'demultiplexer', 'address decoding', 'not', 'and'],
-        },
+        // 'full-adder' migrated to src/experiments/full-adder/
+        toExploreExperiment(EXPERIMENTS_BY_ID['full-adder']),
+        // 'half-subtractor' migrated to src/experiments/half-subtractor/
+        toExploreExperiment(EXPERIMENTS_BY_ID['half-subtractor']),
+        // 'full-subtractor' migrated to src/experiments/full-subtractor/
+        toExploreExperiment(EXPERIMENTS_BY_ID['full-subtractor']),
+        // 'mux-2to1' migrated to src/experiments/mux-2to1/
+        toExploreExperiment(EXPERIMENTS_BY_ID['mux-2to1']),
+        // 'demux-1to2' migrated to src/experiments/demux-1to2/
+        toExploreExperiment(EXPERIMENTS_BY_ID['demux-1to2']),
       ],
     },
   ],
@@ -277,38 +139,14 @@ const SEMESTER_2: ExploreSemester = {
         'Explore Boolean minimisation and address decoding used in memory systems.',
       circuitId: 'encoder-4to2',
       experiments: [
-        {
-          id: 'encoder-4to2',
-          title: '4:2 Priority Encoder',
-          description: 'A priority encoder converts four active-high input lines to a 2-bit binary code. Built from two OR gates using 74HC32.',
-          circuitId: 'encoder-4to2',
-          labRoute: '/labs/encoder-4to2',
-          tags: ['encoder', 'priority', 'binary code', 'or gate', '74hc32'],
-        },
-        {
-          id: 'decoder-2to4',
-          title: '2:4 Binary Decoder',
-          description: 'A binary decoder maps a 2-bit input to one of four mutually exclusive output lines. Built with two NOT and four AND gates.',
-          circuitId: 'decoder-2to4',
-          labRoute: '/labs/decoder-2to4',
-          tags: ['decoder', 'binary', 'address decode', 'not', 'and', '74hc04', '74hc08'],
-        },
-        {
-          id: 'mux-based-logic',
-          title: 'MUX-based Boolean Logic',
-          description: 'Implement arbitrary 2-variable Boolean functions (AND, OR, XOR) using only a 2:1 multiplexer. Foundation of FPGA LUT design.',
-          circuitId: 'mux-based-logic',
-          labRoute: '/labs/mux-based-logic',
-          tags: ['mux', 'lut', 'fpga', 'boolean function', 'universal gate'],
-        },
-        {
-          id: 'demux-address-decoder',
-          title: 'DEMUX as Address Decoder',
-          description: 'Use a 1:2 DEMUX as an active-low address decoder to select one of two peripheral devices on a shared bus.',
-          circuitId: 'demux-address-decoder',
-          labRoute: '/labs/demux-address-decoder',
-          tags: ['demux', 'address decoder', 'bus', 'peripheral select', 'active-low'],
-        },
+        // 'encoder-4to2' migrated to src/experiments/encoder-4to2/
+        toExploreExperiment(EXPERIMENTS_BY_ID['encoder-4to2']),
+        // 'decoder-2to4' migrated to src/experiments/decoder-2to4/
+        toExploreExperiment(EXPERIMENTS_BY_ID['decoder-2to4']),
+        // 'mux-based-logic' migrated to src/experiments/mux-based-logic/
+        toExploreExperiment(EXPERIMENTS_BY_ID['mux-based-logic']),
+        // 'demux-address-decoder' migrated to src/experiments/demux-address-decoder/
+        toExploreExperiment(EXPERIMENTS_BY_ID['demux-address-decoder']),
       ],
     },
     {
@@ -319,22 +157,10 @@ const SEMESTER_2: ExploreSemester = {
         'Measure inter-stage delay using an oscilloscope.',
       circuitId: 'half-adder-revisit',
       experiments: [
-        {
-          id: 'half-adder-revisit',
-          title: 'Half Adder — Propagation Delay Study',
-          description: 'Revisit the half adder with a focus on propagation delay, fan-out limits, and supply-voltage effects on switching speed of 74HC-series ICs.',
-          circuitId: 'half-adder-revisit',
-          labRoute: '/labs/half-adder-revisit',
-          tags: ['adder', 'propagation delay', 'fan-out', '74hc', 'timing', 'oscilloscope'],
-        },
-        {
-          id: 'full-adder-ripple',
-          title: 'Full Adder (4-bit Ripple Carry)',
-          description: 'Chain four full adders to build a 4-bit ripple-carry adder. Observe the cumulative carry propagation delay through all stages.',
-          circuitId: 'full-adder-ripple',
-          labRoute: '/labs/full-adder-ripple',
-          tags: ['ripple carry', '4-bit adder', 'carry propagation', 'alu', 'delay'],
-        },
+        // 'half-adder-revisit' migrated to src/experiments/half-adder-revisit/
+        toExploreExperiment(EXPERIMENTS_BY_ID['half-adder-revisit']),
+        // 'full-adder-ripple' migrated to src/experiments/full-adder-ripple/
+        toExploreExperiment(EXPERIMENTS_BY_ID['full-adder-ripple']),
       ],
     },
     {
@@ -345,54 +171,18 @@ const SEMESTER_2: ExploreSemester = {
         'Use standard 74HC MSI parts and verify truth tables experimentally.',
       circuitId: 'decoder',
       experiments: [
-        {
-          id: 'bcd-xs3-converter',
-          title: 'BCD to Excess-3 Code Converter',
-          description: 'Design and implement a combinational circuit that converts a 4-bit BCD input to its Excess-3 equivalent using basic logic gates.',
-          circuitId: 'decoder',
-          labRoute: '/labs/bcd-xs3-converter',
-          tags: ['bcd', 'excess-3', 'code converter', 'combinational', 'logic gates'],
-        },
-        {
-          id: 'gray-binary-converter',
-          title: 'Gray Code ↔ Binary Converter',
-          description: 'Build bidirectional converters between Gray code and binary using XOR gates. Verify all 4-bit input combinations.',
-          circuitId: 'decoder',
-          labRoute: '/labs/gray-binary-converter',
-          tags: ['gray code', 'binary', 'code converter', 'xor', 'combinational'],
-        },
-        {
-          id: 'mux-4to1-ic',
-          title: '4:1 Multiplexer using 74HC153',
-          description: 'Wire a 74HC153 dual 4:1 MUX IC to route one of four data inputs to the output. Verify operation for all select-line combinations.',
-          circuitId: 'mux-based-logic',
-          labRoute: '/labs/mux-4to1-ic',
-          tags: ['mux', '4:1 multiplexer', '74hc153', 'data selection', 'combinational'],
-        },
-        {
-          id: 'demux-1to4-ic',
-          title: '1:4 Demultiplexer using 74HC139',
-          description: 'Configure a 74HC139 dual 2:4 decoder/demultiplexer as a 1:4 DEMUX. Route a single input to one of four outputs via address lines.',
-          circuitId: 'demux-address-decoder',
-          labRoute: '/labs/demux-1to4-ic',
-          tags: ['demux', '1:4 demultiplexer', '74hc139', 'address lines', 'combinational'],
-        },
-        {
-          id: 'binary-adder-4bit',
-          title: '4-bit Binary Adder using 74HC283',
-          description: 'Use the 74HC283 4-bit full adder IC to add two 4-bit numbers. Observe carry-out and verify the sum for all operand combinations.',
-          circuitId: 'full-adder-ripple',
-          labRoute: '/labs/binary-adder-4bit',
-          tags: ['adder', '4-bit', '74hc283', 'carry-out', 'combinational'],
-        },
-        {
-          id: 'binary-subtractor-4bit',
-          title: "4-bit Binary Subtractor (2's Complement)",
-          description: "Implement a 4-bit subtractor by combining a 74HC283 adder with XOR inverters and carry-in set to 1, realising 2's complement subtraction.",
-          circuitId: 'full-adder-ripple',
-          labRoute: '/labs/binary-subtractor-4bit',
-          tags: ["2's complement", 'subtractor', '4-bit', 'xor', '74hc283'],
-        },
+        // 'bcd-xs3-converter' migrated to src/experiments/bcd-xs3-converter/
+        toExploreExperiment(EXPERIMENTS_BY_ID['bcd-xs3-converter']),
+        // 'gray-binary-converter' migrated to src/experiments/gray-binary-converter/
+        toExploreExperiment(EXPERIMENTS_BY_ID['gray-binary-converter']),
+        // 'mux-4to1-ic' migrated to src/experiments/mux-4to1-ic/
+        toExploreExperiment(EXPERIMENTS_BY_ID['mux-4to1-ic']),
+        // 'demux-1to4-ic' migrated to src/experiments/demux-1to4-ic/
+        toExploreExperiment(EXPERIMENTS_BY_ID['demux-1to4-ic']),
+        // 'binary-adder-4bit' migrated to src/experiments/binary-adder-4bit/
+        toExploreExperiment(EXPERIMENTS_BY_ID['binary-adder-4bit']),
+        // 'binary-subtractor-4bit' migrated to src/experiments/binary-subtractor-4bit/
+        toExploreExperiment(EXPERIMENTS_BY_ID['binary-subtractor-4bit']),
       ],
     },
     {
@@ -403,38 +193,14 @@ const SEMESTER_2: ExploreSemester = {
         'Understand state transitions, clock edges, and asynchronous counter operation.',
       circuitId: 'half-adder',
       experiments: [
-        {
-          id: 'sr-latch',
-          title: 'SR Latch using 74HC279',
-          description: 'Implement an SR latch using the 74HC279 quad SR latch IC. Observe set, reset, and hold states and identify the forbidden input condition.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/sr-latch',
-          tags: ['latch', 'sr latch', '74hc279', 'sequential', 'set reset'],
-        },
-        {
-          id: 'd-flip-flop',
-          title: 'D Flip-Flop using 74HC74',
-          description: 'Use the 74HC74 dual D flip-flop IC to capture data on the rising clock edge. Verify the characteristic table and observe propagation delay.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/d-flip-flop',
-          tags: ['flip-flop', 'd flip-flop', '74hc74', 'clock edge', 'sequential'],
-        },
-        {
-          id: 'jk-t-flip-flop',
-          title: 'JK and T Flip-Flop using 74HC76',
-          description: 'Configure the 74HC76 JK flip-flop in JK and toggle (T) modes. Observe toggle, set, reset, and hold states and verify frequency division.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/jk-t-flip-flop',
-          tags: ['flip-flop', 'jk flip-flop', 't flip-flop', '74hc76', 'toggle', 'sequential'],
-        },
-        {
-          id: 'mod5-counter',
-          title: 'MOD-5 Asynchronous Counter using 74HC93',
-          description: 'Wire the 74HC93 4-bit ripple counter with feedback to implement a MOD-5 counter. Observe the count sequence and reset glitch on an oscilloscope.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/mod5-counter',
-          tags: ['counter', 'mod-5', 'asynchronous', '74hc93', 'ripple counter', 'sequential'],
-        },
+        // 'sr-latch' migrated to src/experiments/sr-latch/
+        toExploreExperiment(EXPERIMENTS_BY_ID['sr-latch']),
+        // 'd-flip-flop' migrated to src/experiments/d-flip-flop/
+        toExploreExperiment(EXPERIMENTS_BY_ID['d-flip-flop']),
+        // 'jk-t-flip-flop' migrated to src/experiments/jk-t-flip-flop/
+        toExploreExperiment(EXPERIMENTS_BY_ID['jk-t-flip-flop']),
+        // 'mod5-counter' migrated to src/experiments/mod5-counter/
+        toExploreExperiment(EXPERIMENTS_BY_ID['mod5-counter']),
       ],
     },
     {
@@ -447,30 +213,12 @@ const SEMESTER_2: ExploreSemester = {
       experiments: [
         // 'gate-level-minimization' migrated to src/experiments/gate-level-minimization/
         toExploreExperiment(EXPERIMENTS_BY_ID['gate-level-minimization']),
-        {
-          id: 'parity-checker',
-          title: 'Parity Checker/Generator',
-          description: 'Build an even/odd parity generator and checker circuit using XOR gates. Verify error-detection capability by introducing single-bit errors.',
-          circuitId: 'decoder',
-          labRoute: '/labs/parity-checker',
-          tags: ['parity', 'error detection', 'xor', 'parity checker', 'parity generator'],
-        },
-        {
-          id: 'digital-comparator',
-          title: '4-bit Digital Magnitude Comparator',
-          description: 'Design a 4-bit magnitude comparator that asserts A>B, A=B, or A<B outputs. Implement using XNOR gates and cascaded logic.',
-          circuitId: 'decoder',
-          labRoute: '/labs/digital-comparator',
-          tags: ['comparator', '4-bit', 'magnitude', 'xnor', 'combinational'],
-        },
-        {
-          id: 'shift-register',
-          title: '8-bit SIPO Shift Register using 74HC273',
-          description: 'Configure the 74HC273 octal D flip-flop as a serial-in parallel-out shift register. Clock in 8 bits serially and read the parallel output.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/shift-register',
-          tags: ['shift register', 'sipo', '74hc273', 'serial to parallel', 'sequential'],
-        },
+        // 'parity-checker' migrated to src/experiments/parity-checker/
+        toExploreExperiment(EXPERIMENTS_BY_ID['parity-checker']),
+        // 'digital-comparator' migrated to src/experiments/digital-comparator/
+        toExploreExperiment(EXPERIMENTS_BY_ID['digital-comparator']),
+        // 'shift-register' migrated to src/experiments/shift-register/
+        toExploreExperiment(EXPERIMENTS_BY_ID['shift-register']),
       ],
     },
   ],
@@ -595,30 +343,12 @@ const SEMESTER_4: ExploreSemester = {
         'Cover GPIO, 7-segment display driving, ADC, and DAC techniques.',
       circuitId: 'gpio-interfacing',
       experiments: [
-        {
-          id: 'gpio-interfacing',
-          title: 'GPIO Interfacing with LEDs and Switches',
-          description: 'Interface GPIO pins with LEDs (via 330 Ω resistors) and switches (with pull-down resistors). Understand current sourcing/sinking and logic levels.',
-          circuitId: 'gpio-interfacing',
-          labRoute: '/labs/gpio-interfacing',
-          tags: ['gpio', 'microcontroller', 'led', 'switch', 'pull-down', 'logic levels'],
-        },
-        {
-          id: 'seven-segment-display',
-          title: 'Seven Segment Display Interface',
-          description: 'Drive a common-cathode 7-segment display using a decoder IC with 330 Ω current-limiting resistors. Display digits 0–9.',
-          circuitId: 'seven-segment-display',
-          labRoute: '/labs/seven-segment-display',
-          tags: ['seven segment', 'display', 'decoder', '74hc138', 'current limiting'],
-        },
-        {
-          id: 'adc-dac',
-          title: 'ADC and DAC Interfacing',
-          description: 'Interface an ADC0804 to read analog voltage from a potentiometer. Build an R-2R DAC ladder to convert 4-bit digital input to analog output.',
-          circuitId: 'adc-dac',
-          labRoute: '/labs/adc-dac',
-          tags: ['adc', 'dac', 'analog', 'digital conversion', 'r-2r', 'potentiometer'],
-        },
+        // 'gpio-interfacing' migrated to src/experiments/gpio-interfacing/
+        toExploreExperiment(EXPERIMENTS_BY_ID['gpio-interfacing']),
+        // 'seven-segment-display' migrated to src/experiments/seven-segment-display/
+        toExploreExperiment(EXPERIMENTS_BY_ID['seven-segment-display']),
+        // 'adc-dac' migrated to src/experiments/adc-dac/
+        toExploreExperiment(EXPERIMENTS_BY_ID['adc-dac']),
       ],
     },
   ],
