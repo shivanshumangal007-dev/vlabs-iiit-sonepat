@@ -1,9 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const Exp8085BubbleSortContent: LabContent = {
+export const Exp8085BubbleSort: Experiment = {
   id: '8085-bubble-sort',
-  title: 'Bubble Sort of an Array',
+  title: 'Bubble Sort (Ascending/Descending)',
   labType: 'code',
+  status: 'live',
+  explore: {
+    semester: 4,
+    subject: 'Find Smallest & Largest in Array',
+    description: 'Implement bubble sort on a byte array in 8085 assembly. Support both ascending and descending order by changing the compare condition.',
+    tags: ['8085', 'assembly', 'bubble sort', 'sorting', 'array', 'compare'],
+  },
+  metaTitle: 'Bubble Sort (Ascending/Descending) — VLabs',
+  metaDescription: 'Implement bubble sort on a byte array in 8085 assembly. Support both ascending and descending order by changing the compare condition.',
   sections: [
     {
       id: 'theory', type: 'text', title: 'Theory',

@@ -1,9 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const Exp8085MinMaxContent: LabContent = {
+export const Exp8085MinMax: Experiment = {
   id: '8085-min-max',
-  title: 'Find Minimum and Maximum of an Array',
+  title: 'Find Smallest & Largest in Array',
   labType: 'code',
+  status: 'live',
+  explore: {
+    semester: 4,
+    subject: 'Sum of Array Elements',
+    description: 'Scan a byte array using compare instructions to locate the minimum and maximum values. Store both results in designated memory locations.',
+    tags: ['8085', 'assembly', 'array', 'minimum', 'maximum', 'compare'],
+  },
+  metaTitle: 'Find Smallest & Largest in Array — VLabs',
+  metaDescription: 'Scan a byte array using compare instructions to locate the minimum and maximum values. Store both results in designated memory locations.',
   sections: [
     {
       id: 'theory', type: 'text', title: 'Theory',

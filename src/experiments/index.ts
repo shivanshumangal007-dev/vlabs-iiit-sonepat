@@ -9,6 +9,18 @@
 
 import { type Experiment } from './types';
 import { HalfAdder }       from './half-adder';
+import { Exp8085BubbleSort } from './8085-bubble-sort';
+import { Exp8085BcdBinaryConv } from './8085-bcd-binary-conv';
+import { Exp8085BcdAddition } from './8085-bcd-addition';
+import { Exp8085AddSub8bit } from './8085-add-sub-8bit';
+import { Exp8085Multiply8bit } from './8085-multiply-8bit';
+import { Exp8085ArraySquare } from './8085-array-square';
+import { Exp8085Sqrt } from './8085-sqrt';
+import { Exp8085Divide8bit } from './8085-divide-8bit';
+import { Exp8085AddSubCarry } from './8085-add-sub-carry';
+import { Exp8085MinMax } from './8085-min-max';
+import { Exp8085ArraySum } from './8085-array-sum';
+
 import { CacheDirectMapped } from './cache-direct-mapped';
 import { MemoryDesign } from './memory-design';
 import { CacheAssociative } from './cache-associative';
@@ -29,6 +41,18 @@ import { IntroGatesReview } from './intro-gates-review';
 
 export const ALL_EXPERIMENTS: Experiment[] = [
   HalfAdder,
+  Exp8085BubbleSort,
+  Exp8085BcdBinaryConv,
+  Exp8085BcdAddition,
+  Exp8085AddSub8bit,
+  Exp8085Multiply8bit,
+  Exp8085ArraySquare,
+  Exp8085Sqrt,
+  Exp8085Divide8bit,
+  Exp8085AddSubCarry,
+  Exp8085MinMax,
+  Exp8085ArraySum,
+
   CacheDirectMapped,
   MemoryDesign,
   CacheAssociative,

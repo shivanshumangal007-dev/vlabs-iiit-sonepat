@@ -1,9 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const Exp8085BcdBinaryConvContent: LabContent = {
+export const Exp8085BcdBinaryConv: Experiment = {
   id: '8085-bcd-binary-conv',
-  title: 'BCD to Binary and Binary to BCD Conversion',
+  title: 'BCD to Binary Conversion and Vice-Versa',
   labType: 'code',
+  status: 'live',
+  explore: {
+    semester: 4,
+    subject: 'Find Smallest & Largest in Array',
+    description: 'Convert a two-digit packed BCD value to its binary equivalent and back. Validate the round-trip for all BCD values 00–99.',
+    tags: ['8085', 'assembly', 'bcd', 'binary', 'conversion'],
+  },
+  metaTitle: 'BCD to Binary Conversion and Vice-Versa — VLabs',
+  metaDescription: 'Convert a two-digit packed BCD value to its binary equivalent and back. Validate the round-trip for all BCD values 00–99.',
   sections: [
     {
       id: 'theory', type: 'text', title: 'Theory',

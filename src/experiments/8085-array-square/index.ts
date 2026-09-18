@@ -1,9 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const Exp8085ArraySquareContent: LabContent = {
+export const Exp8085ArraySquare: Experiment = {
   id: '8085-array-square',
-  title: 'Square Each Element of an Array',
+  title: 'Square of Array Elements',
   labType: 'code',
+  status: 'live',
+  explore: {
+    semester: 4,
+    subject: 'Sum of Array Elements',
+    description: 'Square each element of a byte array using repeated-addition multiplication and store the 16-bit results back in memory.',
+    tags: ['8085', 'assembly', 'array', 'square', 'multiplication', 'memory'],
+  },
+  metaTitle: 'Square of Array Elements — VLabs',
+  metaDescription: 'Square each element of a byte array using repeated-addition multiplication and store the 16-bit results back in memory.',
   sections: [
     {
       id: 'theory', type: 'text', title: 'Theory',

@@ -1,9 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const Exp8085BcdAdditionContent: LabContent = {
+export const Exp8085BcdAddition: Experiment = {
   id: '8085-bcd-addition',
-  title: 'BCD Addition using DAA Instruction',
+  title: 'BCD Addition using DAA',
   labType: 'code',
+  status: 'live',
+  explore: {
+    semester: 4,
+    subject: 'Addition/Subtraction with Carry/Borrow',
+    description: 'Perform packed BCD addition using the DAA (Decimal Adjust Accumulator) instruction. Verify the result for two-digit BCD operands.',
+    tags: ['8085', 'bcd', 'daa', 'decimal adjust', 'assembly'],
+  },
+  metaTitle: 'BCD Addition using DAA — VLabs',
+  metaDescription: 'Perform packed BCD addition using the DAA (Decimal Adjust Accumulator) instruction. Verify the result for two-digit BCD operands.',
   sections: [
     {
       id: 'theory', type: 'text', title: 'Theory',

@@ -1,9 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const Exp8085Multiply8bitContent: LabContent = {
+export const Exp8085Multiply8bit: Experiment = {
   id: '8085-multiply-8bit',
-  title: 'Multiplication of Two 8-bit Numbers',
+  title: 'Multiplication by Repeated Addition',
   labType: 'code',
+  status: 'live',
+  explore: {
+    semester: 4,
+    subject: 'Addition/Subtraction with Carry/Borrow',
+    description: 'Implement 8-bit unsigned multiplication in 8085 assembly using a repeated-addition loop. Track the loop counter and accumulator across iterations.',
+    tags: ['8085', 'assembly', 'multiplication', 'repeated addition', 'loop'],
+  },
+  metaTitle: 'Multiplication by Repeated Addition — VLabs',
+  metaDescription: 'Implement 8-bit unsigned multiplication in 8085 assembly using a repeated-addition loop. Track the loop counter and accumulator across iterations.',
   sections: [
     {
       id: 'theory', type: 'text', title: 'Theory',

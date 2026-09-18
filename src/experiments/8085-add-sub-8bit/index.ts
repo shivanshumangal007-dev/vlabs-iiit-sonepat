@@ -1,9 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const Exp8085AddSub8bitContent: LabContent = {
+export const Exp8085AddSub8bit: Experiment = {
   id: '8085-add-sub-8bit',
-  title: 'Addition & Subtraction of Two 8-bit Numbers',
+  title: 'Addition & Subtraction of 8-bit Numbers',
   labType: 'code',
+  status: 'live',
+  explore: {
+    semester: 4,
+    subject: '8085 Assembly Programming',
+    description: 'Write 8085 assembly programs to add and subtract two 8-bit numbers stored in memory. Observe the accumulator and flag register after execution.',
+    tags: ['8085', 'assembly', 'addition', 'subtraction', '8-bit'],
+  },
+  metaTitle: 'Addition & Subtraction of 8-bit Numbers — VLabs',
+  metaDescription: 'Write 8085 assembly programs to add and subtract two 8-bit numbers stored in memory. Observe the accumulator and flag register after execution.',
   sections: [
     {
       id: 'theory', type: 'text', title: 'Theory',

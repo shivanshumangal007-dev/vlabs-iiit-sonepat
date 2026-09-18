@@ -1,9 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const Exp8085ArraySumContent: LabContent = {
+export const Exp8085ArraySum: Experiment = {
   id: '8085-array-sum',
-  title: 'Sum of an Array of 8-bit Numbers',
+  title: 'Sum of Array Elements',
   labType: 'code',
+  status: 'live',
+  explore: {
+    semester: 4,
+    subject: '8085 Assembly Programming',
+    description: 'Write an 8085 program that iterates over an array stored in memory and accumulates the sum, handling carry into a second register.',
+    tags: ['8085', 'assembly', 'array', 'sum', 'loop', 'memory'],
+  },
+  metaTitle: 'Sum of Array Elements — VLabs',
+  metaDescription: 'Write an 8085 program that iterates over an array stored in memory and accumulates the sum, handling carry into a second register.',
   sections: [
     {
       id: 'theory', type: 'text', title: 'Theory',

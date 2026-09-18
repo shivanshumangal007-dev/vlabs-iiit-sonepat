@@ -1,9 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const Exp8085AddSubCarryContent: LabContent = {
+export const Exp8085AddSubCarry: Experiment = {
   id: '8085-add-sub-carry',
-  title: 'Addition & Subtraction with Carry (16-bit Result)',
+  title: 'Addition/Subtraction with Carry/Borrow',
   labType: 'code',
+  status: 'live',
+  explore: {
+    semester: 4,
+    subject: '8085 Assembly Programming',
+    description: 'Handle multi-precision arithmetic by using ADC and SBB instructions to propagate carry and borrow across 8-bit boundaries.',
+    tags: ['8085', 'assembly', 'adc', 'sbb', 'carry', 'borrow'],
+  },
+  metaTitle: 'Addition/Subtraction with Carry/Borrow — VLabs',
+  metaDescription: 'Handle multi-precision arithmetic by using ADC and SBB instructions to propagate carry and borrow across 8-bit boundaries.',
   sections: [
     {
       id: 'theory', type: 'text', title: 'Theory',

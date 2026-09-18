@@ -1,9 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const Exp8085SqrtContent: LabContent = {
+export const Exp8085Sqrt: Experiment = {
   id: '8085-sqrt',
-  title: 'Square Root using Successive Odd-Number Subtraction',
+  title: 'Square Root of 8-bit Number',
   labType: 'code',
+  status: 'live',
+  explore: {
+    semester: 4,
+    subject: 'Find Smallest & Largest in Array',
+    description: 'Compute the integer square root of an 8-bit number using a successive-approximation loop in 8085 assembly.',
+    tags: ['8085', 'assembly', 'square root', 'approximation', '8-bit'],
+  },
+  metaTitle: 'Square Root of 8-bit Number — VLabs',
+  metaDescription: 'Compute the integer square root of an 8-bit number using a successive-approximation loop in 8085 assembly.',
   sections: [
     {
       id: 'theory', type: 'text', title: 'Theory',

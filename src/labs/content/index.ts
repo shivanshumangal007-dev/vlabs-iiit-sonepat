@@ -54,17 +54,6 @@ import { SrLatchContent }                 from './sr-latch';
 import { DFlipFlopContent }               from './d-flip-flop';
 import { JkTFlipFlopContent }             from './jk-t-flip-flop';
 import { Mod5CounterContent }             from './mod5-counter';
-import { Exp8085AddSub8bitContent }       from './8085-add-sub-8bit';
-import { Exp8085AddSubCarryContent }      from './8085-add-sub-carry';
-import { Exp8085BcdAdditionContent }      from './8085-bcd-addition';
-import { Exp8085Multiply8bitContent }     from './8085-multiply-8bit';
-import { Exp8085Divide8bitContent }       from './8085-divide-8bit';
-import { Exp8085ArraySumContent }         from './8085-array-sum';
-import { Exp8085ArraySquareContent }      from './8085-array-square';
-import { Exp8085MinMaxContent }           from './8085-min-max';
-import { Exp8085BubbleSortContent }       from './8085-bubble-sort';
-import { Exp8085BcdBinaryConvContent }    from './8085-bcd-binary-conv';
-import { Exp8085SqrtContent }             from './8085-sqrt';
 
 /** All lab content keyed by experiment id (matches Circuit.id). */
 export const ALL_CONTENTS: Record<string, LabContent> = {
@@ -125,17 +114,17 @@ export const ALL_CONTENTS: Record<string, LabContent> = {
   'd-flip-flop':                   DFlipFlopContent,
   'jk-t-flip-flop':                JkTFlipFlopContent,
   'mod5-counter':                  Mod5CounterContent,
-  '8085-add-sub-8bit':             Exp8085AddSub8bitContent,
-  '8085-add-sub-carry':            Exp8085AddSubCarryContent,
-  '8085-bcd-addition':             Exp8085BcdAdditionContent,
-  '8085-multiply-8bit':            Exp8085Multiply8bitContent,
-  '8085-divide-8bit':              Exp8085Divide8bitContent,
-  '8085-array-sum':                Exp8085ArraySumContent,
-  '8085-array-square':             Exp8085ArraySquareContent,
-  '8085-min-max':                  Exp8085MinMaxContent,
-  '8085-bubble-sort':              Exp8085BubbleSortContent,
-  '8085-bcd-binary-conv':          Exp8085BcdBinaryConvContent,
-  '8085-sqrt':                     Exp8085SqrtContent,
+  // '8085-add-sub-8bit' migrated
+  // '8085-add-sub-carry' migrated
+  // '8085-bcd-addition' migrated
+  // '8085-multiply-8bit' migrated
+  // '8085-divide-8bit' migrated
+  // '8085-array-sum' migrated
+  // '8085-array-square' migrated
+  // '8085-min-max' migrated
+  // '8085-bubble-sort' migrated
+  // '8085-bcd-binary-conv' migrated
+  // '8085-sqrt' migrated
   // 'alu-simulation' migrated
   // 'memory-design' migrated
   // 'cache-direct-mapped' migrated

@@ -563,94 +563,28 @@ const SEMESTER_4: ExploreSemester = {
         'All experiments in this section are coming soon.',
       circuitId: 'half-adder',
       experiments: [
-        {
-          id: '8085-add-sub-8bit',
-          title: 'Addition & Subtraction of 8-bit Numbers',
-          description: 'Write 8085 assembly programs to add and subtract two 8-bit numbers stored in memory. Observe the accumulator and flag register after execution.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/8085-add-sub-8bit',
-          tags: ['8085', 'assembly', 'addition', 'subtraction', '8-bit'],
-        },
-        {
-          id: '8085-add-sub-carry',
-          title: 'Addition/Subtraction with Carry/Borrow',
-          description: 'Handle multi-precision arithmetic by using ADC and SBB instructions to propagate carry and borrow across 8-bit boundaries.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/8085-add-sub-carry',
-          tags: ['8085', 'assembly', 'adc', 'sbb', 'carry', 'borrow'],
-        },
-        {
-          id: '8085-bcd-addition',
-          title: 'BCD Addition using DAA',
-          description: 'Perform packed BCD addition using the DAA (Decimal Adjust Accumulator) instruction. Verify the result for two-digit BCD operands.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/8085-bcd-addition',
-          tags: ['8085', 'bcd', 'daa', 'decimal adjust', 'assembly'],
-        },
-        {
-          id: '8085-multiply-8bit',
-          title: 'Multiplication by Repeated Addition',
-          description: 'Implement 8-bit unsigned multiplication in 8085 assembly using a repeated-addition loop. Track the loop counter and accumulator across iterations.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/8085-multiply-8bit',
-          tags: ['8085', 'assembly', 'multiplication', 'repeated addition', 'loop'],
-        },
-        {
-          id: '8085-divide-8bit',
-          title: 'Division by Repeated Subtraction',
-          description: 'Implement 8-bit unsigned division in 8085 assembly by repeatedly subtracting the divisor. Capture the quotient and remainder.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/8085-divide-8bit',
-          tags: ['8085', 'assembly', 'division', 'repeated subtraction', 'quotient', 'remainder'],
-        },
-        {
-          id: '8085-array-sum',
-          title: 'Sum of Array Elements',
-          description: 'Write an 8085 program that iterates over an array stored in memory and accumulates the sum, handling carry into a second register.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/8085-array-sum',
-          tags: ['8085', 'assembly', 'array', 'sum', 'loop', 'memory'],
-        },
-        {
-          id: '8085-array-square',
-          title: 'Square of Array Elements',
-          description: 'Square each element of a byte array using repeated-addition multiplication and store the 16-bit results back in memory.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/8085-array-square',
-          tags: ['8085', 'assembly', 'array', 'square', 'multiplication', 'memory'],
-        },
-        {
-          id: '8085-min-max',
-          title: 'Find Smallest & Largest in Array',
-          description: 'Scan a byte array using compare instructions to locate the minimum and maximum values. Store both results in designated memory locations.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/8085-min-max',
-          tags: ['8085', 'assembly', 'array', 'minimum', 'maximum', 'compare'],
-        },
-        {
-          id: '8085-bubble-sort',
-          title: 'Bubble Sort (Ascending/Descending)',
-          description: 'Implement bubble sort on a byte array in 8085 assembly. Support both ascending and descending order by changing the compare condition.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/8085-bubble-sort',
-          tags: ['8085', 'assembly', 'bubble sort', 'sorting', 'array', 'compare'],
-        },
-        {
-          id: '8085-bcd-binary-conv',
-          title: 'BCD to Binary Conversion and Vice-Versa',
-          description: 'Convert a two-digit packed BCD value to its binary equivalent and back. Validate the round-trip for all BCD values 00–99.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/8085-bcd-binary-conv',
-          tags: ['8085', 'assembly', 'bcd', 'binary', 'conversion'],
-        },
-        {
-          id: '8085-sqrt',
-          title: 'Square Root of 8-bit Number',
-          description: 'Compute the integer square root of an 8-bit number using a successive-approximation loop in 8085 assembly.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/8085-sqrt',
-          tags: ['8085', 'assembly', 'square root', 'approximation', '8-bit'],
-        },
+        // '8085-add-sub-8bit' migrated to src/experiments/8085-add-sub-8bit/
+        toExploreExperiment(EXPERIMENTS_BY_ID['8085-add-sub-8bit']),
+        // '8085-add-sub-carry' migrated to src/experiments/8085-add-sub-carry/
+        toExploreExperiment(EXPERIMENTS_BY_ID['8085-add-sub-carry']),
+        // '8085-bcd-addition' migrated to src/experiments/8085-bcd-addition/
+        toExploreExperiment(EXPERIMENTS_BY_ID['8085-bcd-addition']),
+        // '8085-multiply-8bit' migrated to src/experiments/8085-multiply-8bit/
+        toExploreExperiment(EXPERIMENTS_BY_ID['8085-multiply-8bit']),
+        // '8085-divide-8bit' migrated to src/experiments/8085-divide-8bit/
+        toExploreExperiment(EXPERIMENTS_BY_ID['8085-divide-8bit']),
+        // '8085-array-sum' migrated to src/experiments/8085-array-sum/
+        toExploreExperiment(EXPERIMENTS_BY_ID['8085-array-sum']),
+        // '8085-array-square' migrated to src/experiments/8085-array-square/
+        toExploreExperiment(EXPERIMENTS_BY_ID['8085-array-square']),
+        // '8085-min-max' migrated to src/experiments/8085-min-max/
+        toExploreExperiment(EXPERIMENTS_BY_ID['8085-min-max']),
+        // '8085-bubble-sort' migrated to src/experiments/8085-bubble-sort/
+        toExploreExperiment(EXPERIMENTS_BY_ID['8085-bubble-sort']),
+        // '8085-bcd-binary-conv' migrated to src/experiments/8085-bcd-binary-conv/
+        toExploreExperiment(EXPERIMENTS_BY_ID['8085-bcd-binary-conv']),
+        // '8085-sqrt' migrated to src/experiments/8085-sqrt/
+        toExploreExperiment(EXPERIMENTS_BY_ID['8085-sqrt']),
       ],
     },
     {

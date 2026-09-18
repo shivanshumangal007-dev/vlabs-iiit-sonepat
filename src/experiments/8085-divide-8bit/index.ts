@@ -1,9 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const Exp8085Divide8bitContent: LabContent = {
+export const Exp8085Divide8bit: Experiment = {
   id: '8085-divide-8bit',
-  title: 'Division of Two 8-bit Numbers',
+  title: 'Division by Repeated Subtraction',
   labType: 'code',
+  status: 'live',
+  explore: {
+    semester: 4,
+    subject: 'Addition/Subtraction with Carry/Borrow',
+    description: 'Implement 8-bit unsigned division in 8085 assembly by repeatedly subtracting the divisor. Capture the quotient and remainder.',
+    tags: ['8085', 'assembly', 'division', 'repeated subtraction', 'quotient', 'remainder'],
+  },
+  metaTitle: 'Division by Repeated Subtraction — VLabs',
+  metaDescription: 'Implement 8-bit unsigned division in 8085 assembly by repeatedly subtracting the divisor. Capture the quotient and remainder.',
   sections: [
     {
       id: 'theory', type: 'text', title: 'Theory',
