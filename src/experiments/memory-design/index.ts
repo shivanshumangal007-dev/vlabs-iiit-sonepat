@@ -1,9 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const memoryDesign: LabContent = {
+export const MemoryDesign: Experiment = {
   id: 'memory-design',
-  title: 'Memory Design: ROM & RAM',
+  title: 'Memory Design — RAM & ROM',
   labType: 'simulation',
+  status: 'live',
+  explore: {
+    semester: 3,
+    subject: 'Arithmetic Logic Unit Simulation',
+    description: 'Study the internal organisation of static RAM and ROM cells. Simulate read/write operations and understand address decoding.',
+    tags: ['ram', 'rom', 'memory', 'address decode', 'read write'],
+  },
+  metaTitle: 'Memory Design — RAM & ROM — VLabs',
+  metaDescription: 'Study the internal organisation of static RAM and ROM cells. Simulate read/write operations and understand address decoding.',
   sections: [
     {
       id: 'theory',

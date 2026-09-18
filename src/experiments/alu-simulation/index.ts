@@ -1,9 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const aluSimulation: LabContent = {
+export const AluSimulation: Experiment = {
   id: 'alu-simulation',
-  title: '4-bit ALU Operations',
+  title: 'Arithmetic Logic Unit Simulation',
   labType: 'simulation',
+  status: 'live',
+  explore: {
+    semester: 3,
+    subject: 'Memory & CPU Systems',
+    description: 'Simulate a simple 4-bit ALU supporting ADD, SUB, AND, OR, and NOT operations. Observe flag outputs (carry, zero, overflow).',
+    tags: ['alu', 'arithmetic logic unit', 'flags', 'simulation', 'cpu'],
+  },
+  metaTitle: 'Arithmetic Logic Unit Simulation — VLabs',
+  metaDescription: 'Simulate a simple 4-bit ALU supporting ADD, SUB, AND, OR, and NOT operations. Observe flag outputs (carry, zero, overflow).',
   sections: [
     {
       id: 'theory',

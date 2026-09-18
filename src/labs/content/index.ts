@@ -65,11 +65,6 @@ import { Exp8085MinMaxContent }           from './8085-min-max';
 import { Exp8085BubbleSortContent }       from './8085-bubble-sort';
 import { Exp8085BcdBinaryConvContent }    from './8085-bcd-binary-conv';
 import { Exp8085SqrtContent }             from './8085-sqrt';
-import { aluSimulation }                  from './alu-simulation';
-import { memoryDesign }                   from './memory-design';
-import { cacheDirectMapped }              from './cache-direct-mapped';
-import { cacheAssociative }               from './cache-associative';
-import { cpuDesign }                      from './cpu-design';
 
 /** All lab content keyed by experiment id (matches Circuit.id). */
 export const ALL_CONTENTS: Record<string, LabContent> = {
@@ -141,11 +136,11 @@ export const ALL_CONTENTS: Record<string, LabContent> = {
   '8085-bubble-sort':              Exp8085BubbleSortContent,
   '8085-bcd-binary-conv':          Exp8085BcdBinaryConvContent,
   '8085-sqrt':                     Exp8085SqrtContent,
-  'alu-simulation':                aluSimulation,
-  'memory-design':                 memoryDesign,
-  'cache-direct-mapped':           cacheDirectMapped,
-  'cache-associative':             cacheAssociative,
-  'cpu-design':                    cpuDesign,
+  // 'alu-simulation' migrated
+  // 'memory-design' migrated
+  // 'cache-direct-mapped' migrated
+  // 'cache-associative' migrated
+  // 'cpu-design' migrated
 
   // ── New experiments registry (new source wins on conflict) ───────────────
   // During migration: each experiment moved to src/experiments/<slug>/ is

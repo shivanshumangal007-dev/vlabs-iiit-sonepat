@@ -1,9 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const cpuDesign: LabContent = {
+export const CpuDesign: Experiment = {
   id: 'cpu-design',
-  title: 'CPU: Fetch-Decode-Execute Cycle',
+  title: 'CPU Fetch-Decode-Execute Simulation',
   labType: 'simulation',
+  status: 'live',
+  explore: {
+    semester: 3,
+    subject: 'Arithmetic Logic Unit Simulation',
+    description: 'Trace the fetch, decode, and execute stages of a simple single-cycle CPU. Observe register file, ALU, and memory interactions cycle by cycle.',
+    tags: ['cpu', 'fetch decode execute', 'instruction cycle', 'register file', 'simulation'],
+  },
+  metaTitle: 'CPU Fetch-Decode-Execute Simulation — VLabs',
+  metaDescription: 'Trace the fetch, decode, and execute stages of a simple single-cycle CPU. Observe register file, ALU, and memory interactions cycle by cycle.',
   sections: [
     {
       id: 'theory',

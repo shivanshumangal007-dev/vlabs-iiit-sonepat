@@ -9,6 +9,12 @@
 
 import { type Experiment } from './types';
 import { HalfAdder }       from './half-adder';
+import { CacheDirectMapped } from './cache-direct-mapped';
+import { MemoryDesign } from './memory-design';
+import { CacheAssociative } from './cache-associative';
+import { CpuDesign } from './cpu-design';
+import { AluSimulation } from './alu-simulation';
+
 import { RegistersCountersTheory } from './registers-counters-theory';
 import { CFileOperations1 } from './c-file-operations-1';
 import { CombinationalMultipliers } from './combinational-multipliers';
@@ -23,6 +29,12 @@ import { IntroGatesReview } from './intro-gates-review';
 
 export const ALL_EXPERIMENTS: Experiment[] = [
   HalfAdder,
+  CacheDirectMapped,
+  MemoryDesign,
+  CacheAssociative,
+  CpuDesign,
+  AluSimulation,
+
   RegistersCountersTheory,
   CFileOperations1,
   CombinationalMultipliers,

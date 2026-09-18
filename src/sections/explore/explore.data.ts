@@ -519,46 +519,16 @@ const SEMESTER_3: ExploreSemester = {
         'All experiments in this section are coming soon.',
       circuitId: 'decoder',
       experiments: [
-        {
-          id: 'alu-simulation',
-          title: 'Arithmetic Logic Unit Simulation',
-          description: 'Simulate a simple 4-bit ALU supporting ADD, SUB, AND, OR, and NOT operations. Observe flag outputs (carry, zero, overflow).',
-          circuitId: 'decoder',
-          labRoute: '/labs/alu-simulation',
-          tags: ['alu', 'arithmetic logic unit', 'flags', 'simulation', 'cpu'],
-        },
-        {
-          id: 'memory-design',
-          title: 'Memory Design — RAM & ROM',
-          description: 'Study the internal organisation of static RAM and ROM cells. Simulate read/write operations and understand address decoding.',
-          circuitId: 'decoder',
-          labRoute: '/labs/memory-design',
-          tags: ['ram', 'rom', 'memory', 'address decode', 'read write'],
-        },
-        {
-          id: 'cache-direct-mapped',
-          title: 'Direct-Mapped Cache Design',
-          description: 'Implement a direct-mapped cache and trace hit/miss behaviour for a sequence of memory accesses. Compute hit rate and average access time.',
-          circuitId: 'decoder',
-          labRoute: '/labs/cache-direct-mapped',
-          tags: ['cache', 'direct mapped', 'hit rate', 'miss penalty', 'memory hierarchy'],
-        },
-        {
-          id: 'cache-associative',
-          title: 'Fully-Associative Cache Design',
-          description: 'Explore fully-associative cache with LRU replacement policy. Compare hit rates against direct-mapped cache for the same access sequences.',
-          circuitId: 'decoder',
-          labRoute: '/labs/cache-associative',
-          tags: ['cache', 'fully associative', 'lru', 'replacement policy', 'memory'],
-        },
-        {
-          id: 'cpu-design',
-          title: 'CPU Fetch-Decode-Execute Simulation',
-          description: 'Trace the fetch, decode, and execute stages of a simple single-cycle CPU. Observe register file, ALU, and memory interactions cycle by cycle.',
-          circuitId: 'decoder',
-          labRoute: '/labs/cpu-design',
-          tags: ['cpu', 'fetch decode execute', 'instruction cycle', 'register file', 'simulation'],
-        },
+        // 'alu-simulation' migrated to src/experiments/alu-simulation/
+        toExploreExperiment(EXPERIMENTS_BY_ID['alu-simulation']),
+        // 'memory-design' migrated to src/experiments/memory-design/
+        toExploreExperiment(EXPERIMENTS_BY_ID['memory-design']),
+        // 'cache-direct-mapped' migrated to src/experiments/cache-direct-mapped/
+        toExploreExperiment(EXPERIMENTS_BY_ID['cache-direct-mapped']),
+        // 'cache-associative' migrated to src/experiments/cache-associative/
+        toExploreExperiment(EXPERIMENTS_BY_ID['cache-associative']),
+        // 'cpu-design' migrated to src/experiments/cpu-design/
+        toExploreExperiment(EXPERIMENTS_BY_ID['cpu-design']),
       ],
     },
     {

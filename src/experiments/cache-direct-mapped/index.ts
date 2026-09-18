@@ -1,9 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const cacheDirectMapped: LabContent = {
+export const CacheDirectMapped: Experiment = {
   id: 'cache-direct-mapped',
-  title: 'Cache Memory: Direct-Mapped',
+  title: 'Direct-Mapped Cache Design',
   labType: 'simulation',
+  status: 'live',
+  explore: {
+    semester: 3,
+    subject: 'Memory Design — RAM & ROM',
+    description: 'Implement a direct-mapped cache and trace hit/miss behaviour for a sequence of memory accesses. Compute hit rate and average access time.',
+    tags: ['cache', 'direct mapped', 'hit rate', 'miss penalty', 'memory hierarchy'],
+  },
+  metaTitle: 'Direct-Mapped Cache Design — VLabs',
+  metaDescription: 'Implement a direct-mapped cache and trace hit/miss behaviour for a sequence of memory accesses. Compute hit rate and average access time.',
   sections: [
     {
       id: 'theory',

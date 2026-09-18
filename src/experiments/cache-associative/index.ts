@@ -1,9 +1,18 @@
-import { type LabContent } from '@/labs/lab-content.types';
+import { type Experiment } from '@/experiments/types';
 
-export const cacheAssociative: LabContent = {
+export const CacheAssociative: Experiment = {
   id: 'cache-associative',
-  title: 'Cache Memory: Fully-Associative with LRU',
+  title: 'Fully-Associative Cache Design',
   labType: 'simulation',
+  status: 'live',
+  explore: {
+    semester: 3,
+    subject: 'Arithmetic Logic Unit Simulation',
+    description: 'Explore fully-associative cache with LRU replacement policy. Compare hit rates against direct-mapped cache for the same access sequences.',
+    tags: ['cache', 'fully associative', 'lru', 'replacement policy', 'memory'],
+  },
+  metaTitle: 'Fully-Associative Cache Design — VLabs',
+  metaDescription: 'Explore fully-associative cache with LRU replacement policy. Compare hit rates against direct-mapped cache for the same access sequences.',
   sections: [
     {
       id: 'theory',
