@@ -1,0 +1,15 @@
+# VLabs
+
+> VLabs is an open-source virtual ECE lab platform. Students and educators can interact with 3D electronic components, step through circuit assembly tutorials, and explore labs organized by semester.
+
+VLabs provides interactive simulations of breadboards, logic gates, ICs, resistors, LEDs, and other ECE components. Labs are organized by semester and cover topics from basic logic gates to complex circuits like adders, latches, and multiplexers.
+
+## Community
+
+- [GitHub](https://github.com/OSS-Initiatives-IIIT-Sonepat/vlabs-iiit-sonepat): Source code, issues, and contributions.
+- [Discord](https://discord.gg/5MaJbxFnm): Community chat and support.
+
+## Docs
+
+- [Source code](https://github.com/OSS-Initiatives-IIIT-Sonepat/vlabs-iiit-sonepat)
+- [Contributing](https://github.com/OSS-Initiatives-IIIT-Sonepat/vlabs-iiit-sonepat/blob/main/CONTRIBUTING.md)
