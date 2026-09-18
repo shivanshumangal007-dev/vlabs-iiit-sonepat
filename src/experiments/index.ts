@@ -1,26 +1,12 @@
-// ── src/experiments/index.ts ──────────────────────────────────────────────────
-// Central registry of all migrated Experiment objects.
-// During the transition period only the pilot experiment lives here;
-// subsequent phases add one entry per migrated lab.
-//
-// The old registries (labs/content/index.ts, labs/circuits/index.ts,
-// sections/explore/explore.data.ts) import from here and merge these entries
-// in, so the new source wins on conflict without breaking any existing consumer.
-
 import { type Experiment } from './types';
 import { HalfAdder }       from './half-adder';
 import { Mux2to1 } from './mux-2to1';
 import { Demux1to2 } from './demux-1to2';
 import { Encoder4to2 } from './encoder-4to2';
 import { Decoder2to4 } from './decoder-2to4';
-
 import { FullAdder } from './full-adder';
 import { HalfSubtractor } from './half-subtractor';
 import { FullSubtractor } from './full-subtractor';
-import { Mux2to1 } from './mux-2to1';
-import { Demux1to2 } from './demux-1to2';
-import { Encoder4to2 } from './encoder-4to2';
-import { Decoder2to4 } from './decoder-2to4';
 import { ZenerDiode } from './zener-diode';
 import { LogicGates } from './logic-gates';
 import { StudyBasicComponents } from './study-basic-components';
@@ -59,7 +45,6 @@ import { SrLatch } from './sr-latch';
 import { DFlipFlop } from './d-flip-flop';
 import { JkTFlipFlop } from './jk-t-flip-flop';
 import { Mod5Counter } from './mod5-counter';
-
 import { Exp8085BubbleSort } from './8085-bubble-sort';
 import { Exp8085BcdBinaryConv } from './8085-bcd-binary-conv';
 import { Exp8085BcdAddition } from './8085-bcd-addition';
@@ -71,13 +56,11 @@ import { Exp8085Divide8bit } from './8085-divide-8bit';
 import { Exp8085AddSubCarry } from './8085-add-sub-carry';
 import { Exp8085MinMax } from './8085-min-max';
 import { Exp8085ArraySum } from './8085-array-sum';
-
 import { CacheDirectMapped } from './cache-direct-mapped';
 import { MemoryDesign } from './memory-design';
 import { CacheAssociative } from './cache-associative';
 import { CpuDesign } from './cpu-design';
 import { AluSimulation } from './alu-simulation';
-
 import { RegistersCountersTheory } from './registers-counters-theory';
 import { CFileOperations1 } from './c-file-operations-1';
 import { CombinationalMultipliers } from './combinational-multipliers';
@@ -88,7 +71,6 @@ import { GateLevelMinimization } from './gate-level-minimization';
 import { BoothsMultiplier } from './booths-multiplier';
 import { CExpressions } from './c-expressions';
 import { IntroGatesReview } from './intro-gates-review';
-  // pilot — Phase 2 proof of concept
 
 export const ALL_EXPERIMENTS: Experiment[] = [
   HalfAdder,
@@ -96,14 +78,9 @@ export const ALL_EXPERIMENTS: Experiment[] = [
   Demux1to2,
   Encoder4to2,
   Decoder2to4,
-
   FullAdder,
   HalfSubtractor,
   FullSubtractor,
-  Mux2to1,
-  Demux1to2,
-  Encoder4to2,
-  Decoder2to4,
   ZenerDiode,
   LogicGates,
   StudyBasicComponents,
@@ -142,7 +119,6 @@ export const ALL_EXPERIMENTS: Experiment[] = [
   DFlipFlop,
   JkTFlipFlop,
   Mod5Counter,
-
   Exp8085BubbleSort,
   Exp8085BcdBinaryConv,
   Exp8085BcdAddition,
@@ -154,13 +130,11 @@ export const ALL_EXPERIMENTS: Experiment[] = [
   Exp8085AddSubCarry,
   Exp8085MinMax,
   Exp8085ArraySum,
-
   CacheDirectMapped,
   MemoryDesign,
   CacheAssociative,
   CpuDesign,
   AluSimulation,
-
   RegistersCountersTheory,
   CFileOperations1,
   CombinationalMultipliers,
@@ -171,9 +145,8 @@ export const ALL_EXPERIMENTS: Experiment[] = [
   BoothsMultiplier,
   CExpressions,
   IntroGatesReview,
-
 ];
 
 /** O(1) lookup by canonical id slug. */
 export const EXPERIMENTS_BY_ID: Record<string, Experiment> =
-  Object.fromEntries(ALL_EXPERIMENTS.map((e) => [e.id, e]));
+  Object.fromEntries(ALL_EXPERIMENTS.map(e => [e.id, e]));

@@ -185,8 +185,8 @@ export type Step = {
 
 // ── Truth table ───────────────────────────────────────────────────────────
 export type TruthTableRow = {
-  inputs:  Record<string, 0 | 1>;
-  outputs: Record<string, 0 | 1>;
+  inputs:  Record<string, number | string>;
+  outputs: Record<string, number | string>;
 };
 
 export type TruthTable = {
