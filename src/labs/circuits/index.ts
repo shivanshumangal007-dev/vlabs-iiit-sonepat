@@ -1,4 +1,8 @@
-import { HalfAdder }      from './half-adder';
+// ── Experiments registry (new source, wins over legacy entries) ─────────────
+import { EXPERIMENTS_BY_ID } from '@/experiments';
+import { toCircuit }         from '@/experiments/adapters';
+
+// 'HalfAdder' removed — now sourced from src/experiments/half-adder/
 import { FullAdder }      from './full-adder';
 import { HalfSubtractor } from './half-subtractor';
 import { FullSubtractor } from './full-subtractor';
@@ -47,7 +51,7 @@ import { ShiftRegister } from './shift-register';
 import { type Circuit }   from '@/labs/types';
 
 export const ALL_CIRCUITS: Circuit[] = [
-  HalfAdder,
+  // 'HalfAdder' removed from this array — see experiments registry merge below
   FullAdder,
   HalfSubtractor,
   FullSubtractor,
@@ -93,10 +97,17 @@ export const ALL_CIRCUITS: Circuit[] = [
   ParityChecker,
   DigitalComparator,
   ShiftRegister,
+
+  // ── Derived from experiments registry (new source) ──────────────────────
+  // Filter out undefined (text/code experiments have no circuit).
+  ...Object.values(EXPERIMENTS_BY_ID)
+    .map(toCircuit)
+    .filter((c): c is Circuit => c !== undefined),
 ];
 
 export {
-  HalfAdder, FullAdder, HalfSubtractor, FullSubtractor,
+  // HalfAdder removed — see EXPERIMENTS_BY_ID['half-adder'] if needed directly
+  FullAdder, HalfSubtractor, FullSubtractor,
   Mux2to1, Demux1to2, Encoder4to2, Decoder2to4, ZenerDiodeCircuit,
   LogicGatesCircuit, StudyBasicComponentsCircuit, OhmsLawCircuit, KirchhoffLawsCircuit,
   PnJunctionDiodeCircuit, ZenerVoltageRegulatorCircuit, HalfWaveRectifierCircuit,

@@ -5,7 +5,10 @@
 
 import { type LabContent } from '@/labs/lab-content.types';
 
-import { HalfAdderContent }               from './half-adder';
+// ── Experiments registry (new source, wins over legacy entries on conflict) ─
+import { EXPERIMENTS_BY_ID } from '@/experiments';
+import { toLabContent }      from '@/experiments/adapters';
+
 import { FullAdderContent }               from './full-adder';
 import { HalfSubtractorContent }          from './half-subtractor';
 import { FullSubtractorContent }          from './full-subtractor';
@@ -80,7 +83,8 @@ import { cpuDesign }                      from './cpu-design';
 
 /** All lab content keyed by experiment id (matches Circuit.id). */
 export const ALL_CONTENTS: Record<string, LabContent> = {
-  'half-adder':                    HalfAdderContent,
+  // ── Legacy entries ──────────────────────────────────────────────────────
+  // 'half-adder' removed — now sourced from src/experiments/half-adder/
   'full-adder':                    FullAdderContent,
   'half-subtractor':               HalfSubtractorContent,
   'full-subtractor':               FullSubtractorContent,
@@ -152,4 +156,12 @@ export const ALL_CONTENTS: Record<string, LabContent> = {
   'cache-direct-mapped':           cacheDirectMapped,
   'cache-associative':             cacheAssociative,
   'cpu-design':                    cpuDesign,
+
+  // ── New experiments registry (new source wins on conflict) ───────────────
+  // During migration: each experiment moved to src/experiments/<slug>/ is
+  // automatically picked up here.  When migration is complete, this whole
+  // legacy section can be replaced with a single spread.
+  ...Object.fromEntries(
+    Object.values(EXPERIMENTS_BY_ID).map((e) => [e.id, toLabContent(e)])
+  ),
 };

@@ -1,6 +1,22 @@
 // ── Explore page data ──────────────────────────────────────────────────────
 // Each subject groups a set of experiments. Semesters contain subjects.
 
+// ── Experiments registry ──────────────────────────────────────────────────────
+import { EXPERIMENTS_BY_ID } from '@/experiments';
+import { type Experiment }   from '@/experiments/types';
+
+/** Project a new-style Experiment into the ExploreExperiment shape. */
+function toExploreExperiment(exp: Experiment): ExploreExperiment {
+  return {
+    id:          exp.id,
+    title:       exp.title,
+    description: exp.explore.description,
+    circuitId:   exp.circuit?.id ?? exp.id,
+    labRoute:    `/labs/${exp.id}`,
+    tags:        exp.explore.tags,
+  };
+}
+
 export type ExploreExperiment = {
   id: string;
   title: string;
@@ -201,14 +217,8 @@ const SEMESTER_1: ExploreSemester = {
           labRoute: '/labs/logic-gates',
           tags: ['logic gates', 'and', 'or', 'not', 'nand', 'nor', 'xor', '74hc'],
         },
-        {
-          id: 'half-adder',
-          title: 'Half Adder',
-          description: 'A half adder adds two single-bit inputs A and B, producing a Sum (XOR) and Carry (AND) bit. Built using 74HC86 and 74HC08 ICs.',
-          circuitId: 'half-adder',
-          labRoute: '/labs/half-adder',
-          tags: ['adder', 'xor', 'and', 'sum', 'carry', 'combinational logic'],
-        },
+        // 'half-adder' migrated to src/experiments/half-adder/ — derived below
+        toExploreExperiment(EXPERIMENTS_BY_ID['half-adder']),
         {
           id: 'full-adder',
           title: 'Full Adder',
