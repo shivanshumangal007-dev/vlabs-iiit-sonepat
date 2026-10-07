@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
-import { hole, railHole, COLS, colsForBoardId, PITCH } from "./coords";
+import { hole, railHole, COLS, colsForBoardId, PITCH, BOARD_D, TOP_Y } from "./coords";
 import {
   buildBreadboard,
   buildLongBreadboard,
@@ -19,6 +19,7 @@ import {
   buildVoltmeter,
   buildOscilloscope,
   buildFunctionGenerator,
+  buildFunctionGeneratorStandalone,
   buildBjt,
   buildMosfet,
   buildDiode,
@@ -47,6 +48,37 @@ import {
 
 // ── PinRef → THREE.Vector3 ────────────────────────────────────────────────
 // Uses the real DIP-14 pin resolver for IcPins.
+
+// ── Bench layout ─────────────────────────────────────────────────────────────
+// Instruments are placed in two rows behind the breadboard (negative Z).
+// Row 0 = large instruments (oscilloscope, FG, logic analyser)  — further back
+// Row 1 = small panel meters (ammeter, voltmeter)               — closer
+//
+// Slots are assigned left→right within each row. Callers pass the circuit's
+// component array once and get back a counter-based Vector3 position.
+
+const BENCH_Z_LARGE  = -(BOARD_D / 2 + PITCH * 9);   // behind the board
+const BENCH_Z_SMALL  = -(BOARD_D / 2 + PITCH * 4.5); // closer row
+const BENCH_SLOT_W_LARGE = PITCH * 8.0;               // horizontal gap per large instrument
+const BENCH_SLOT_W_SMALL = PITCH * 5.5;               // horizontal gap per small instrument
+const BENCH_LARGE_X0 = -(PITCH * 16);                 // start x for large row
+const BENCH_SMALL_X0 = -(PITCH * 12);                 // start x for small row
+
+function makeBenchCounter() {
+  let largeIdx = 0;
+  let smallIdx = 0;
+  return {
+    large(): THREE.Vector3 {
+      const x = BENCH_LARGE_X0 + largeIdx++ * BENCH_SLOT_W_LARGE;
+      return new THREE.Vector3(x, TOP_Y, BENCH_Z_LARGE);
+    },
+    small(): THREE.Vector3 {
+      const x = BENCH_SMALL_X0 + smallIdx++ * BENCH_SLOT_W_SMALL;
+      return new THREE.Vector3(x, TOP_Y, BENCH_Z_SMALL);
+    },
+  };
+}
+
 function resolvePin(
   pin: PinRef,
   all: ComponentInstance[],
@@ -104,6 +136,7 @@ function buildInstance(
   inst: ComponentInstance,
   all: ComponentInstance[],
   ledOnMap: Map<string, boolean>,
+  bench: ReturnType<typeof makeBenchCounter>,
 ): THREE.Group | null {
   switch (inst.type) {
     case "breadboard":
@@ -258,37 +291,35 @@ function buildInstance(
     }
 
     case "ammeter": {
-      const p = (inst as any).probes as [any, any] | undefined;
-      const pos = p
-        ? (resolvePin(p[0], all) ?? new THREE.Vector3())
-        : new THREE.Vector3();
-      return buildAmmeter(pos);
+      const group = buildAmmeter(bench.small());
+      return group;
     }
 
     case "voltmeter": {
-      const p = (inst as any).probes as [any, any] | undefined;
-      const pos = p
-        ? (resolvePin(p[0], all) ?? new THREE.Vector3())
-        : new THREE.Vector3();
-      return buildVoltmeter(pos);
+      const group = buildVoltmeter(bench.small());
+      return group;
     }
 
     case "oscilloscope": {
-      const pos = new THREE.Vector3();
-      return buildOscilloscope(pos);
+      const group = buildOscilloscope(bench.large());
+      return group;
     }
 
     case "function-generator": {
-      const pos = new THREE.Vector3();
-      return buildFunctionGenerator(pos);
+      const g = buildFunctionGeneratorStandalone();
+      const pos = bench.large();
+      g.position.set(pos.x, pos.y, pos.z);
+      return g;
     }
 
     case "logic-analyser": {
-      return buildLogicAnalyzer(new THREE.Vector3());
+      const g = buildLogicAnalyzer(bench.large());
+      return g;
     }
 
     case "transformer": {
-      return buildTransformer(new THREE.Vector3());
+      const g = buildTransformer(bench.large());
+      return g;
     }
 
     case "mcu-trainer": {
@@ -496,8 +527,9 @@ export function LabSceneCanvas({
 
     // Build all component meshes
     const map = new Map<string, THREE.Group>();
+    const bench = makeBenchCounter();
     for (const inst of circuit.components) {
-      const g = buildInstance(inst, circuit.components, simResult.ledOn);
+      const g = buildInstance(inst, circuit.components, simResult.ledOn, bench);
       if (g) {
         g.visible = false;
         pivot.add(g);
@@ -658,6 +690,8 @@ export function LabSceneCanvas({
       }
 
       const displayVal = step.readings?.[inst.id] ?? "--";
+      // Capture the old position so we can restore it after rebuilding
+      const oldPos = old?.position.clone() ?? new THREE.Vector3();
       let fresh: THREE.Group;
 
       if (inst.type === "potentiometer") {
@@ -672,21 +706,14 @@ export function LabSceneCanvas({
           : undefined;
         fresh = buildIcMeter("right", displayVal, targets);
       } else if (inst.type === "ammeter") {
-        const p = (inst as any).probes as [any, any] | undefined;
-        const pos = p
-          ? (resolvePin(p[0], circuit.components) ?? new THREE.Vector3())
-          : new THREE.Vector3();
-        fresh = buildAmmeter(pos);
+        fresh = buildAmmeter(oldPos);
       } else if (inst.type === "voltmeter") {
-        const p = (inst as any).probes as [any, any] | undefined;
-        const pos = p
-          ? (resolvePin(p[0], circuit.components) ?? new THREE.Vector3())
-          : new THREE.Vector3();
-        fresh = buildVoltmeter(pos);
+        fresh = buildVoltmeter(oldPos);
       } else if (inst.type === "oscilloscope") {
-        fresh = buildOscilloscope(new THREE.Vector3());
+        fresh = buildOscilloscope(oldPos);
       } else if (inst.type === "function-generator") {
-        fresh = buildFunctionGenerator(new THREE.Vector3());
+        fresh = buildFunctionGeneratorStandalone();
+        fresh.position.copy(oldPos);
       } else {
         // dc-jack / battery
         const t = (inst as any).terminals as [any, any] | undefined;
