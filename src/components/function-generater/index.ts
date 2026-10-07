@@ -178,6 +178,8 @@ function ribbonGeometry(
   const geo = new THREE.BufferGeometry();
   geo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
   geo.setIndex(idx);
+  geo.computeBoundingBox();
+  geo.computeBoundingSphere();
   return geo;
 }
 
