@@ -75,7 +75,9 @@ These types **render** in the lab UI. Prefer only these in `show[]` unless you a
 
 ### Sim schema only (in `types.ts` + netlist — no 3D mesh yet)
 
-Valid in `components.ts` for simulation/logic, but **`LabScene` returns null`** — invisible on breadboard. Do not rely on these for 3D unless you add a `LabScene`case +`src/components/` builder.
+> [!WARNING]
+> **3D Rendering Limitations:** The components listed below are **simulation-only**. They will function in logic/circuit simulations, but **`LabScene` returns null** so they are completely invisible on the 3D breadboard. 
+> Do not use these in standard breadboard labs unless you first build a corresponding physical 3D mesh in `src/components/` and wire it up in `LabScene.tsx`.
 
 | Group               | `type` values                                                                                                                |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
